@@ -155,3 +155,4 @@ The flow of data in this project follows **React component → Redux → API →
 
 > 💡 **Note:** This flow ensures separation of concerns — **UI components remain dumb**, containers handle logic, and Redux manages the global state while API responses are centralized through a parser.
 
+
