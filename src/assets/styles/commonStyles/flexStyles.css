@@ -1,0 +1,273 @@
+/* ============ COMBINED FLEX UTILITY CLASSES ======= */
+
+/* Center both axis */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Space between horizontally, center vertically */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Start horizontally, center vertically */
+.flex-start-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* End horizontally, center vertically */
+.flex-end-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Center horizontally, start vertically */
+.flex-center-start {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Center horizontally, end vertically */
+.flex-center-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Space-around horizontally, center vertically */
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Space-evenly horizontally, center vertically */
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Column layout with center alignment */
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Column with space-between */
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Row layout with center alignment */
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============== FLEX CONTAINER UTILITIES ================ */
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* ============== JUSTIFY CONTENT ============ */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* ============= ALIGN ITEMS (cross axis) ============= */
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+/* =========== ALIGN CONTENT =============== */
+.content-start {
+  align-content: flex-start;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.content-between {
+  align-content: space-between;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
+.content-stretch {
+  align-content: stretch;
+}
+
+/* ============= GAP UTILITIES ============ */
+.gap-xs {
+  gap: 4px;
+}
+
+.gap-sm {
+  gap: 8px;
+}
+
+.gap-md {
+  gap: 16px;
+}
+
+.gap-lg {
+  gap: 24px;
+}
+
+.gap-xl {
+  gap: 32px;
+}
+
+/* ============ FLEX ITEM UTILITIES ============ */
+.flex-0 {
+  flex: 0 0 auto;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-initial {
+  flex: 0 1 auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+/* ============= ORDER UTILITIES ============== */
+.order-0 {
+  order: 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.order-4 {
+  order: 4;
+}
+
+/* =========== ALIGN SELF (item override) ============ */
+.self-auto {
+  align-self: auto;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+.self-stretch {
+  align-self: stretch;
+}

@@ -1,0 +1,81 @@
+/* ========== OVERFLOW UTILITIES ========== */
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+/* ========== SCROLLBAR HIDE (Cross-browser) ========== */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* ========== SCROLLBAR THIN ========== */
+.scrollbar-thin {
+  scrollbar-width: thin; /* Firefox */
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* ========== SCROLLBAR NOT THIN (DEFAULT) ========== */
+.scrollbar-not-thin {
+  scrollbar-width: auto; /* Firefox */
+}
+.scrollbar-not-thin::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* ========== RED SCROLLBAR COLOR ========== */
+.scrollbar-red::-webkit-scrollbar-thumb {
+  background-color: #e53935;
+  border-radius: 4px;
+}
+.scrollbar-red::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-red {
+  scrollbar-color: #e53935 transparent; /* Firefox */
+}
+
+/* ========== GRAY SCROLLBAR COLOR ========== */
+.scrollbar-gray::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+.scrollbar-gray::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.scrollbar-gray {
+  scrollbar-color: #888 #f1f1f1; /* Firefox */
+}
