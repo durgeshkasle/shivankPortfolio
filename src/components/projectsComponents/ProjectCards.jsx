@@ -1,24 +1,17 @@
 import React from 'react';
-import {
-  Box,
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Chip,
-  Button,
-  useTheme,
-  styled,
-} from '@mui/material';
 
-import magicBusLogo from '../../assets/images/projectsImages/magicBusLogo.jpg';
-import jarvisLogo from '../../assets/images/projectsImages/jarvisLogo.png';
-import tomorLogo from '../../assets/images/projectsImages/tomorLogo.webp';
-import multiActLogo from '../../assets/images/projectsImages/multiActLogo.jpeg';
+// @mui Components :-
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Chip from '@mui/material/Chip';
+import Button from '@mui/material/Button';
+import { useTheme, styled } from '@mui/material/styles';
 
-tomorLogo.webp;
-
+// ========= Styled Components ===========
 const StyledCard = styled(Card)(({ theme }) => ({
   background: theme.palette.background.paper,
   borderRadius: '20px',
@@ -39,39 +32,10 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
-const ProjectCards = () => {
+// ========= Component =========
+export default function ProjectCards(props) {
+  const { projects = [] } = props;
   const theme = useTheme();
-
-  const projects = [
-    {
-      title: 'Portfolio Website',
-      desc: 'A personal portfolio built using React.js and Material UI with theme-based design.',
-      tech: ['React.js', 'MUI', 'Framer Motion'],
-      image: magicBusLogo,
-      link: '#',
-    },
-    {
-      title: 'Task Management App',
-      desc: 'A Kanban-style task tracker built using MERN stack and Redux Toolkit.',
-      tech: ['MERN', 'Redux', 'JWT Auth'],
-      image: jarvisLogo,
-      link: '#',
-    },
-    {
-      title: 'E-commerce Dashboard',
-      desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
-      tech: ['Next.js', 'MUI', 'Chart.js'],
-      image: tomorLogo,
-      link: '#',
-    },
-    {
-      title: 'E-commerce Dashboard',
-      desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
-      tech: ['Next.js', 'MUI', 'Chart.js'],
-      image: multiActLogo,
-      link: '#',
-    },
-  ];
 
   return (
     <Box sx={{ py: 8, px: 3 }}>
@@ -159,6 +123,4 @@ const ProjectCards = () => {
       </Grid>
     </Box>
   );
-};
-
-export default ProjectCards;
+}

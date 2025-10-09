@@ -1,32 +1,25 @@
 import React from 'react';
-import { Box, Typography, Chip, useTheme, styled } from '@mui/material';
 
+// @mui Components :-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
+import { useTheme, styled } from '@mui/material/styles';
+
+// =========== Styled Components ========
 const StackContainer = styled(Box)(({ theme }) => ({
   background: theme.palette.background.paper,
   borderRadius: '20px',
   padding: '32px',
   margin: '0 auto',
-  //   maxWidth: "600px",
   textAlign: 'center',
   boxShadow: '0 6px 18px rgba(0,0,0,0.35)',
   border: `1px solid rgba(255,255,255,0.08)`,
 }));
 
-const techStack = [
-  'React.js',
-  'Next.js',
-  'Node.js',
-  'Express',
-  'MongoDB',
-  'Redux Toolkit',
-  'TypeScript',
-  'Material UI',
-  'Tailwind',
-  'Framer Motion',
-  'JWT Auth',
-];
-
-const ProjectTechStack = () => {
+// =========== Component =============
+export default function ProjectTechStack(props) {
+  const { techStack = [] } = props;
   const theme = useTheme();
 
   return (
@@ -63,6 +56,4 @@ const ProjectTechStack = () => {
       </Box>
     </StackContainer>
   );
-};
-
-export default ProjectTechStack;
+}

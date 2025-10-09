@@ -38,7 +38,6 @@ import SkillProgress from '../components/techExpertiseComponents/SkillProgress';
 import SkillTagCloud from '../components/techExpertiseComponents/SkillTagCloud';
 
 const TechExpertiseContainer = () => {
-
   const skillsData = [
     { skill: 'React.js', level: 90 },
     { skill: 'Next.js', level: 85 },

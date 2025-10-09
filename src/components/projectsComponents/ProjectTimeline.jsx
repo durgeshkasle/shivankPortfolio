@@ -1,18 +1,13 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-  useTheme,
-  styled,
-  Stepper,
-  Step,
-  StepLabel,
-  useMediaQuery,
-} from '@mui/material';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import BuildIcon from '@mui/icons-material/Build';
-import CodeIcon from '@mui/icons-material/Code';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+// @mui Components :-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme, styled } from '@mui/material/styles';
 
 // ===== Styled Container =====
 const TimelineContainer = styled(Box)(({ theme }) => ({
@@ -24,14 +19,9 @@ const TimelineContainer = styled(Box)(({ theme }) => ({
   border: `1px solid rgba(255,255,255,0.08)`,
 }));
 
-const steps = [
-  { label: 'Planning & Design', icon: <BuildIcon color="primary" /> },
-  { label: 'Development', icon: <CodeIcon color="secondary" /> },
-  { label: 'Testing & Debugging', icon: <CheckCircleIcon color="success" /> },
-  { label: 'Deployment', icon: <RocketLaunchIcon sx={{ color: '#ff4081' }} /> },
-];
-
-const ProjectTimeline = () => {
+// ======= Component =========
+export default function ProjectTimeline(props) {
+  const { steps = [] } = props;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -72,6 +62,4 @@ const ProjectTimeline = () => {
       </Stepper>
     </TimelineContainer>
   );
-};
-
-export default ProjectTimeline;
+}
