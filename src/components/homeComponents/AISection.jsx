@@ -1,80 +1,27 @@
-// import React from "react";
-// import { Box, Typography, Paper, useTheme, styled } from "@mui/material";
-// import BoltIcon from "@mui/icons-material/Bolt";
-// import SpeedIcon from "@mui/icons-material/Speed";
-// import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
-// import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
-
-// const CardGrid = styled(Box)(({ theme }) => ({
-//   display: "grid",
-//   gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-//   gap: theme.spacing(3),
-//   marginTop: theme.spacing(4),
-// }));
-
-// const FeatureCard = styled(Paper)(({ theme }) => ({
-//   background: theme.palette.background.paper,
-//   padding: theme.spacing(3),
-//   borderRadius: 16,
-//   boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
-//   textAlign: "center",
-//   transition: "all 0.3s ease",
-//   cursor: "pointer",
-//   "&:hover": {
-//     transform: "translateY(-6px)",
-//     boxShadow: "0 12px 30px rgba(0,0,0,0.45)",
-//     border: `1px solid ${theme.palette.primary.light}`,
-//     background: "linear-gradient(145deg, rgba(25,35,55,0.95), rgba(16,22,36,0.9))",
-//   },
-// }));
-
-// const features = [
-//   { title: "AI-Powered Speed", desc: "Accelerate dev workflow", icon: <SpeedIcon color="primary" /> },
-//   { title: "Smart Suggestions", desc: "Intuitive code assistance", icon: <BoltIcon color="secondary" /> },
-//   { title: "Vibe Coding", desc: "UX-first & performance focus", icon: <AutoAwesomeIcon color="success" /> },
-//   { title: "Rapid Deployment", desc: "CI/CD ready workflow", icon: <RocketLaunchIcon color="error" /> },
-// ];
-
-// const FeatureHighlights = () => {
-//   const theme = useTheme();
-//   return (
-//     <CardGrid>
-//       {features.map((feature) => (
-//         <FeatureCard key={feature.title}>
-//           <Box sx={{ fontSize: 40, mb: 2 }}>{feature.icon}</Box>
-//           <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
-//             {feature.title}
-//           </Typography>
-//           <Typography variant="body2" sx={{ color: theme.palette.text.secondary }}>
-//             {feature.desc}
-//           </Typography>
-//         </FeatureCard>
-//       ))}
-//     </CardGrid>
-//   );
-// };
-
-// export default FeatureHighlights;
-
 import React from 'react';
-import { Box, Typography, Grid, keyframes, styled, useTheme, Card } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
-import BoltIcon from '@mui/icons-material/Bolt';
-import CodeIcon from '@mui/icons-material/Code';
+
+// @mui Components
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import { keyframes, styled, useTheme } from '@mui/material/styles';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import LayersIcon from '@mui/icons-material/Layers';
 
-// import BlinkingStyledLabel from "../commonComponents/BlinkingLabel";
-
-// Styled components
+//======== Styled components ===========
 const Section = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(6, 2),
   backgroundColor: theme.palette.background.default,
   color: theme.palette.text.primary,
   display: 'flex',
+  height: 'calc(100vh - 100px)',
   justifyContent: 'space-between',
+  alignItems: 'center',
   flexWrap: 'wrap',
   gap: theme.spacing(4),
+  [theme.breakpoints.down('md')]: {
+    height: '100%',
+    padding: theme.spacing(6, 2, 0, 2),
+  },
 }));
 
 const FeatureCard = styled(Box)(({ theme }) => ({
@@ -110,6 +57,7 @@ const DevelopmentStackCard = styled(Card)(({ theme }) => ({
   width: '100%',
   maxWidth: '500px',
   padding: '30px',
+  maxHeight: '500px',
   backgroundColor: theme.palette.background.paper,
   boxShadow: theme.shadows[5],
   transition: 'all 0.3s ease',
@@ -150,51 +98,10 @@ const BlinkingLabel = styled(Typography)(({ theme }) => {
   };
 });
 
-const AISection = () => {
+// ========= Component ==========
+export default function AISection(props) {
+  const { featureCards = [], stackCards = [] } = props;
   const theme = useTheme();
-
-  // Feature data
-  const featureCards = [
-    {
-      icon: <StarIcon sx={{ fontSize: 40, color: theme.palette.primary.main, mb: 1 }} />,
-      title: 'AI-Assisted',
-      desc: '60% faster development with AI tools',
-    },
-    {
-      icon: <BoltIcon sx={{ fontSize: 40, color: theme.palette.success.main, mb: 1 }} />,
-      title: 'Vibe Coding',
-      desc: 'Intuitive UX with performance focus',
-    },
-  ];
-
-  // Stack data
-  const stackCards = [
-    {
-      icon: <CodeIcon sx={{ color: theme.palette.info.main }} />,
-      title: 'Claude AI',
-      bg: '#152230',
-    },
-    {
-      icon: <BoltIcon sx={{ color: theme.palette.error.main }} />,
-      title: 'GPT Integration',
-      bg: '#464343ff',
-    },
-    {
-      icon: <StarIcon sx={{ color: theme.palette.primary.main }} />,
-      title: 'GitHub Copilot',
-      bg: '#152230',
-    },
-    {
-      icon: <LayersIcon sx={{ color: theme.palette.success.main }} />,
-      title: 'Vibe-First Design',
-      bg: '#464343ff',
-    },
-    {
-      icon: <LayersIcon sx={{ color: theme.palette.success.main }} />,
-      title: 'Rapid Deployment',
-      bg: '#152230',
-    },
-  ];
 
   return (
     <Section>
@@ -226,7 +133,7 @@ const AISection = () => {
           performance optimization.
         </Typography>
 
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ justifyContent: { md: 'start', xs: 'center' } }}>
           {featureCards.map((card, index) => (
             <Grid item xs={12} md={6} key={index}>
               <FeatureCard>
@@ -278,6 +185,4 @@ const AISection = () => {
       </DevelopmentStackCard>
     </Section>
   );
-};
-
-export default AISection;
+}

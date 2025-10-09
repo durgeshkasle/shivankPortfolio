@@ -20,7 +20,7 @@ import TerminalIcon from '@mui/icons-material/Terminal';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 // About Module Pages ;-
-import Hero from '../components/aboutComponents/Hero';
+import HeroSection from '../components/aboutComponents/HeroSection';
 import Experience from '../components/aboutComponents/Experience';
 import Education from '../components/aboutComponents/Education';
 import Stats from '../components/aboutComponents/Stats';
@@ -174,7 +174,7 @@ const AboutContainer = () => {
 
   return (
     <div>
-      <Hero />
+      <HeroSection />
       <Experience highlights={highlights} />
       <Education
         educationDetails={educationDetails}

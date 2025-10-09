@@ -6,13 +6,13 @@ import { styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import profileImg from '../../assets/images/profileImg1.png';
 
-// ===== Styled Components =====
+// ===== Styled Components =========
 const HeroContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   width: '100%',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: theme.spacing(6, 2),
+  padding: theme.spacing(2, 2),
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(2, 0),
   },
@@ -46,8 +46,8 @@ const ProfileImage = styled(Avatar)(({ theme }) => ({
   },
 }));
 
-// ===== Component =====
-const Hero = () => {
+// ========== Component ==========
+export default function Hero() {
   return (
     <HeroContainer id="about">
       <Grid container spacing={10} alignItems="center">
@@ -91,6 +91,4 @@ const Hero = () => {
       </Grid>
     </HeroContainer>
   );
-};
-
-export default Hero;
+}

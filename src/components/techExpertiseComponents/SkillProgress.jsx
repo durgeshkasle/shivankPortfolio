@@ -45,12 +45,12 @@ export default function SkillProgress(props) {
 
   return (
     <Container>
-      <Box sx={{ textAlign: 'center', mb: 8 }}>
+      <Box sx={{ textAlign: 'center' }}>
         <Typography
           variant="h3"
           sx={{
             fontWeight: 700,
-            mb: 1,
+            mb: 3,
             background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',

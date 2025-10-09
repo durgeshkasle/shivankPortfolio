@@ -38,7 +38,7 @@ export default function ProjectCards(props) {
   const theme = useTheme();
 
   return (
-    <Box sx={{ py: 8, px: 3 }}>
+    <Box sx={{ py: { sm: 2, md: 5 }, px: { md: 0, sm: 2 } }}>
       <Typography
         variant="h3"
         sx={{
