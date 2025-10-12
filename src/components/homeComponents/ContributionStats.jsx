@@ -1,23 +1,23 @@
 // src/pages/Home/ContributionStats.jsx
 import React from 'react';
-import {
-  Box,
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  useTheme,
-  styled,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from '@mui/material';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
+// @mui Component :-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import { useTheme, styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
+// ======= Styled Components =======
 const Root = styled('section')(({ theme }) => ({
   padding: '28px 16px',
 }));
@@ -29,25 +29,25 @@ const StatsCard = styled(Card)(({ theme }) => ({
   border: `1px solid rgba(255,255,255,0.04)`,
 }));
 
-// Mock data for BarChart
-const skillData = [
-  { name: 'React', Projects: 10 },
-  { name: 'Next.js', Projects: 8 },
-  { name: 'Node.js', Projects: 12 },
-  { name: 'MongoDB', Projects: 7 },
-  { name: 'Redux', Projects: 9 },
-  { name: 'MUI', Projects: 11 },
-];
-
-// Mock data for Table
-const recentProjects = [
-  { name: 'Portfolio Website', tech: 'React, MUI', stars: 45, status: 'Completed' },
-  { name: 'TaskFlow Kanban', tech: 'MERN, Redux', stars: 33, status: 'Ongoing' },
-  { name: 'Ecom Dashboard', tech: 'Next.js, Chart.js', stars: 28, status: 'Completed' },
-];
-
+// ============== Components ==========
 export default function ContributionStats() {
   const theme = useTheme();
+
+  // Mock data for BarChart
+  const skillData = [
+    { name: 'React', Projects: 10 },
+    { name: 'Next.js', Projects: 8 },
+    { name: 'Node.js', Projects: 12 },
+    { name: 'MongoDB', Projects: 7 },
+    { name: 'Redux', Projects: 9 },
+    { name: 'MUI', Projects: 11 },
+  ];
+
+  const recentProjects = [
+    { name: 'Portfolio Website', tech: 'React, MUI', stars: 45, status: 'Completed' },
+    { name: 'TaskFlow Kanban', tech: 'MERN, Redux', stars: 33, status: 'Ongoing' },
+    { name: 'Ecom Dashboard', tech: 'Next.js, Chart.js', stars: 28, status: 'Completed' },
+  ];
 
   return (
     <Root id="stats-graph-table">

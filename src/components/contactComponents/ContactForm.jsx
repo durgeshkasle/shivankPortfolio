@@ -36,7 +36,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 // Styled Components
 const ChipBox = styled(Box)(({ theme }) => ({
-  display: "flex",
+  display: 'flex',
   justifyContent: 'space-evenly',
   flexWrap: 'wrap',
   backgroundColor: { xs: 'red', md: 'pink' },
@@ -99,7 +99,7 @@ export default function ContactForm({
             textTransform: 'none',
             px: 4,
             py: 1.5,
-            mb:"20px"
+            mb: '20px',
           }}
         >
           {showForm ? 'Hide Contact Form' : 'Show Contact Form'}

@@ -1,7 +1,11 @@
 // src/pages/Home/DeveloperTerminal.jsx
 import React from 'react';
-import { Box, Typography, useTheme, styled } from '@mui/material';
 
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { useTheme, styled } from '@mui/material/styles';
+
+// ========= Styled Components ========
 const TerminalRoot = styled('section')(({ theme }) => ({
   padding: '28px 16px',
 }));
@@ -59,6 +63,7 @@ function useTypedLines(lines = [], charSpeed = 28, lineDelay = 700) {
   return out;
 }
 
+// ======== Component =======
 export default function DeveloperTerminal() {
   const theme = useTheme();
 

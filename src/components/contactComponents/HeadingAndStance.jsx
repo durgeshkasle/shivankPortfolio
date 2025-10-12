@@ -1,7 +1,9 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
 
-const HeadingAndStance = ({ heading, stance }) => {
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
+export default function HeadingAndStance({ heading, stance }) {
   return (
     <Box textAlign="center" sx={{ mb: 6 }}>
       <Typography
@@ -25,6 +27,4 @@ const HeadingAndStance = ({ heading, stance }) => {
       </Typography>
     </Box>
   );
-};
-
-export default HeadingAndStance;
+}

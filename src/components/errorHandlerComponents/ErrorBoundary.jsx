@@ -1,6 +1,5 @@
 import React from 'react';
 import { ErrorBoundary as ReactErrorBoundary } from 'react-error-boundary';
-
 import { reloadWindow } from '../../utils/reloadWindow';
 import ErrorFallback from './ErrorFallback';
 

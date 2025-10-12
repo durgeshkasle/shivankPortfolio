@@ -1,7 +1,13 @@
-// src/pages/Home/QuickStats.jsx
 import React from 'react';
-import { Grid, Card, Box, Typography, useTheme, styled } from '@mui/material';
 
+// @mui components :-
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { useTheme, styled } from '@mui/material/styles';
+
+// ======= Styled Components =======
 const Root = styled('section')(({ theme }) => ({
   padding: '36px 16px',
 }));
@@ -33,6 +39,7 @@ function useCountUp(target = 0, duration = 1000) {
   return value;
 }
 
+// ============= Component =============
 export default function QuickStats() {
   const theme = useTheme();
 

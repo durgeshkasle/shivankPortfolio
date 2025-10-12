@@ -1,5 +1,9 @@
 import React from 'react';
-import { Box, Typography, keyframes, styled, useTheme } from '@mui/material';
+
+// @mui Components :-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { keyframes, styled, useTheme } from '@mui/material/styles';
 
 // Define keyframes inside styled component
 const BlinkingLabel = styled(Typography)(({ theme }) => {

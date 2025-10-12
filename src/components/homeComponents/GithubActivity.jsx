@@ -1,11 +1,15 @@
 // src/pages/Home/GithubActivity.jsx
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent, Link, useTheme, styled } from '@mui/material';
 
-// NOTE: This component uses a small mock by default. To fetch real data, replace the mock with a fetch()
-// to GitHub's public API (no auth for basic data) and map repos/commits. I left it mock-friendly so it
-// works out-of-the-box without additional setup.
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Link from '@mui/material/Link';
+import { useTheme, styled } from '@mui/material/styles';
 
+// ========== Styled Components ========
 const Root = styled('section')(({ theme }) => ({
   padding: '28px 16px',
 }));
@@ -39,6 +43,7 @@ const mockRepos = [
   },
 ];
 
+// ========== Component ========
 export default function GithubActivity({ username = null }) {
   const theme = useTheme();
   const [repos, setRepos] = React.useState(mockRepos);

@@ -1,6 +1,13 @@
 import React from 'react';
-import { Grid, Card, CardContent, Typography, IconButton, useTheme, styled } from '@mui/material';
 
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import { useTheme, styled } from '@mui/material/styles';
+
+// ========== Styled Components ========
 const StyledCard = styled(Card)(({ theme }) => ({
   textAlign: 'center',
   padding: theme.spacing(3),
@@ -19,6 +26,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
+// ======== Component ========
 export default function ContactCard({ contacts }) {
   const theme = useTheme();
 

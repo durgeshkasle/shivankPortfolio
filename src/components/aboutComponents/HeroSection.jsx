@@ -1,6 +1,12 @@
 import React from 'react';
-import { Box, Typography, Button, keyframes, useTheme, styled, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+
+// @mui Components :-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import { keyframes, useTheme, styled } from '@mui/material/styles';
 
 // Simple typewriter hook
 function useTypewriter(words = [], speed = 120, pause = 1400) {
@@ -62,7 +68,7 @@ const BlinkingLabel = styled(Typography)(({ theme }) => {
   };
 });
 
-// Styled Components
+// ======= Styled Components =========
 const StatsCard = styled(Box)(({ theme }) => ({
   width: '600px',
   borderRadius: 24,

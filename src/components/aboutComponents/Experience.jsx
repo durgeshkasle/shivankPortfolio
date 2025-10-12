@@ -12,6 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
 
+// ======== Styled Components =========
 const ExperienceContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
@@ -29,6 +30,7 @@ const ExperienceCard = styled(Paper)(({ theme }) => ({
   width: '100%',
 }));
 
+// ======== Component ========
 export default function Experience(props) {
   const { highlights = [] } = props;
   const theme = useTheme();

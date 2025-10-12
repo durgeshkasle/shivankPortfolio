@@ -51,7 +51,7 @@ const ContactContainer = () => {
     defaultValues: {
       user_name: '',
       user_email: '',
-      subject: "",
+      subject: '',
       message: '',
     },
     resolver: yupResolver(contactFormSchema),
