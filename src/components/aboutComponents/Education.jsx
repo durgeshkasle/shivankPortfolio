@@ -17,12 +17,17 @@ const EducationContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   padding: theme.spacing(8, 2),
+
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(2, 2),
+  },
 }));
 
 const EducationCard = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   borderRadius: '20px',
-  background: 'linear-gradient(135deg, #101624, #0a0f1c)',
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
+  border: '1px solid rgba(255,255,255,0.08)',
   color: theme.palette.text.primary,
   boxShadow: '0px 8px 24px rgba(0,0,0,0.4)',
   width: '100%',

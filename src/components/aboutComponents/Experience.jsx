@@ -18,7 +18,10 @@ const ExperienceContainer = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: theme.spacing(8, 1),
+  padding: theme.spacing(6, 1),
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(4, 1),
+  },
 }));
 
 const ExperienceCard = styled(Paper)(({ theme }) => ({
@@ -42,11 +45,12 @@ export default function Experience(props) {
         sx={{
           fontWeight: 700,
           color: 'primary.main',
-          mb: 4,
+          mb: { md: 4, sm: 0 },
           textAlign: 'center',
           background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
+          fontSize: { xs: '26px', md: '50px' },
         }}
       >
         Professional Experience

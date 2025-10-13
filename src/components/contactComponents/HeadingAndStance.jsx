@@ -7,10 +7,10 @@ export default function HeadingAndStance({ heading, stance }) {
   return (
     <Box textAlign="center" sx={{ mb: 6 }}>
       <Typography
-        variant="h1"
         fontWeight={800}
         sx={{
           mb: 2,
+          fontSize: { md: '38px', xs: '25px' },
           background: (theme) =>
             `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
           WebkitBackgroundClip: 'text',

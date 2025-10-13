@@ -11,6 +11,8 @@ import { useTheme, styled } from '@mui/material/styles';
 const StyledCard = styled(Card)(({ theme }) => ({
   textAlign: 'center',
   padding: theme.spacing(3),
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
+  border: '1px solid rgba(255,255,255,0.08)',
   borderRadius: '20px',
   boxShadow: theme.shadows[5],
   transition: 'all 0.3s ease',

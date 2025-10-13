@@ -73,9 +73,9 @@ const StatsCard = styled(Box)(({ theme }) => ({
   width: '600px',
   borderRadius: 24,
   background: 'linear-gradient(145deg, #0f172a, #111827)',
+  border: '1px solid rgba(255,255,255,0.08)',
   padding: '24px 28px',
   boxShadow: '0 8px 30px rgba(0,0,0,0.45)',
-  border: '1px solid rgba(255,255,255,0.08)',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
@@ -135,7 +135,7 @@ const ProgressBar = styled('div')(({ theme, value = 0, gradient }) => ({
 
 const statsData = [
   {
-    title: 'Full Stack Developer',
+    title: 'Full Stack Developer ',
     exp: '2+ Years Experience',
     projects: '4+',
     techs: '10+',

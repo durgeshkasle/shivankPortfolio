@@ -31,6 +31,8 @@ const FeatureCard = styled(Box)(({ theme }) => ({
   textAlign: 'center',
   boxShadow: theme.shadows[3],
   transition: 'all 0.3s ease',
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
+  border: '1px solid rgba(255,255,255,0.08)',
   borderRadius: '13px',
   '&:hover': {
     transform: 'translateY(-10px)',
@@ -58,7 +60,8 @@ const DevelopmentStackCard = styled(Card)(({ theme }) => ({
   maxWidth: '500px',
   padding: '30px',
   maxHeight: '500px',
-  backgroundColor: theme.palette.background.paper,
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
+  border: '1px solid rgba(255,255,255,0.08)',
   boxShadow: theme.shadows[5],
   transition: 'all 0.3s ease',
   '&:hover': {

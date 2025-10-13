@@ -171,6 +171,21 @@ export default function ContactForm({
             </Box>
 
             <Controller
+              name="phoneNo"
+              control={control}
+              render={({ field, fieldState }) => (
+                <StyledTextField
+                  {...field}
+                  fullWidth
+                  label="Phone Number"
+                  margin="normal"
+                  error={!!fieldState.error}
+                  helperText={fieldState.error?.message}
+                />
+              )}
+            />
+
+            <Controller
               name="subject"
               control={control}
               render={({ field, fieldState }) => (

@@ -184,7 +184,7 @@ const TechExpertiseContainer = () => {
       ],
     },
     {
-      title: 'Tools & Platforms',
+      title: 'Tools',
       sectionIcon: <SettingsApplicationsIcon sx={{ color: '#ab47bc', fontSize: '2rem', mr: 1 }} />,
       items: [
         {
