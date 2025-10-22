@@ -1,13 +1,22 @@
-import './App.css';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import PrivateRoutes from './routes/PrivateRoutes';
-import PublicRoutes from './routes/PublicRoutes';
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+
+import './App.css';
+import PublicRoutes from './routes/PublicRoutes';
+import PrivateRoutes from './routes/PrivateRoutes';
 
 function App() {
   // get user auth state from store/context instead of hardcoding
   // const isUserAuthenticated = useSelector((state) => state.user.isAuthenticated);
-  const isUserAuthenticated = true;
+
+  const navigate = useNavigate();
+  const isUserAuthenticated = false;
+
+  useEffect(() => {
+    navigate('/');
+  }, [isUserAuthenticated]);
 
   return (
     <>

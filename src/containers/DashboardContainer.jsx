@@ -9,9 +9,8 @@ const DashboardContainer = () => {
   if (error) return <p>Error fetching products</p>;
 
   return (
-    <div style={{ padding: '2rem', backgroundColor: 'red' }}>
-      <h2>Products List</h2>
-      {/* <div
+    <div style={{ padding: '2rem' }}>
+      <div
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
@@ -38,7 +37,7 @@ const DashboardContainer = () => {
             <p>Discounted: ${product.discountedPrice}</p>
           </div>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
