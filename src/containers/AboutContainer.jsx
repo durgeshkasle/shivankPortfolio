@@ -175,13 +175,13 @@ const AboutContainer = () => {
   return (
     <div>
       <HeroSection />
+      <Stats stats={stats} />
       <Experience highlights={highlights} />
       <Education
         educationDetails={educationDetails}
         certifications={certifications}
         achievements={achievements}
       />
-      <Stats stats={stats} />
     </div>
   );
 };

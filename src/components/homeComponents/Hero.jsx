@@ -5,6 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import profileImg from '../../assets/images/homeImages/profileImg.jpeg';
+import resume from '../../assets/pdfs/resume.pdf';
 
 // ===== Styled Components =========
 const HeroContainer = styled(Box)(({ theme }) => ({
@@ -58,7 +59,7 @@ const ProfileImage = styled(Avatar)(({ theme }) => ({
 }));
 
 // ========== Component ==========
-export default function Hero() {
+export default function Hero({ handleSeeMyWork = () => {} }) {
   return (
     <HeroContainer id="about">
       <Grid
@@ -94,9 +95,11 @@ export default function Hero() {
 
           <Box sx={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <Button variant="contained" color="primary">
-              Download CV
+              <a href={resume} download style={{ color: 'white' }}>
+                Download CV
+              </a>
             </Button>
-            <Button variant="outlined" color="primary">
+            <Button variant="outlined" color="primary" onClick={handleSeeMyWork}>
               See my work →
             </Button>
           </Box>

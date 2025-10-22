@@ -4,7 +4,7 @@ import '../App.css';
 import LayoutHeader from '../components/layoutComponents/Header';
 import LayoutFooter from '../components/layoutComponents/Footer';
 
-export const PublicLayout = () => {
+export const PrivateLayout = () => {
   return (
     <main
       style={{
@@ -19,7 +19,7 @@ export const PublicLayout = () => {
   );
 };
 
-export const PrivateLayout = () => {
+export const PublicLayout = () => {
   return (
     <>
       {/* ===== Fixed Header ===== */}

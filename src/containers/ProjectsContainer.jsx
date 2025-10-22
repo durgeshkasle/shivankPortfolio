@@ -1,47 +1,53 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { toast } from 'react-toastify';
+
 import ProjectCards from '../components/projectsComponents/ProjectCards';
-import ProjectTechStack from '../components/projectsComponents/ProjectTechStack';
 import ProjectTimeline from '../components/projectsComponents/ProjectTimeline';
+import ProjectTechStack from '../components/projectsComponents/ProjectTechStack';
 
 // @mui Icons :-
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import BuildIcon from '@mui/icons-material/Build';
 import CodeIcon from '@mui/icons-material/Code';
+import BuildIcon from '@mui/icons-material/Build';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 // Project Images ;-
-import magicBusLogo from '../assets/images/projectsImages/magicBusLogo.jpg';
+import tomorLogo from '../assets/images/projectsImages/tomorLogo.png';
 import jarvisLogo from '../assets/images/projectsImages/jarvisLogo.png';
-import tomorLogo from '../assets/images/projectsImages/tomorLogo.webp';
+import magicBusLogo from '../assets/images/projectsImages/magicBusLogo.png';
 import multiActLogo from '../assets/images/projectsImages/multiActLogo.jpeg';
 
 const ProjectsContainer = () => {
+  const handleViewMyPro = useCallback(() => {
+    toast.info('Source code is private for security reasons.');
+  }, []);
+
   const projects = [
     {
-      title: 'Portfolio Website',
+      title: 'MagicBus',
       desc: 'A personal portfolio built using React.js and Material UI with theme-based design.',
-      tech: ['React.js', 'MUI', 'Framer Motion'],
+      tech: ['React.js', 'Node.Js', 'Express.Js', 'MongoDB', 'TypeScript', 'MUI'],
       image: magicBusLogo,
       link: '#',
     },
     {
-      title: 'Task Management App',
+      title: 'Jarvis Invest',
       desc: 'A Kanban-style task tracker built using MERN stack and Redux Toolkit.',
-      tech: ['MERN', 'Redux', 'JWT Auth'],
+      tech: ['React.Js', 'Node.Js', 'Express.Js', 'MySQL', 'Redux', 'JWT Auth'],
       image: jarvisLogo,
       link: '#',
     },
     {
-      title: 'E-commerce Dashboard',
+      title: 'Tomor',
       desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
-      tech: ['Next.js', 'MUI', 'Chart.js'],
+      tech: ['Next.Js', 'Shadcn', 'Chart.js', 'JavaScript', 'Payment gateway'],
       image: tomorLogo,
       link: '#',
     },
     {
-      title: 'E-commerce Dashboard',
+      title: 'MultiAct',
       desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
-      tech: ['Next.js', 'MUI', 'Chart.js'],
+      tech: ['React.Js', 'CSS', 'HTML', 'HighChart.js', 'Google Authentication'],
       image: multiActLogo,
       link: '#',
     },
@@ -70,7 +76,7 @@ const ProjectsContainer = () => {
 
   return (
     <>
-      <ProjectCards projects={projects} />
+      <ProjectCards projects={projects} handleViewMyProBtn={handleViewMyPro} />
       <ProjectTechStack techStack={techStack} />
       <ProjectTimeline steps={steps} />
     </>

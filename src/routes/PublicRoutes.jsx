@@ -1,22 +1,37 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+
+// Layout
+import Loader from '../components/commonComponents/Loader';
 import { PublicLayout } from '../containers/LayoutContainer';
+import NotFoundPage from '../pages/ErrorhandlerPages/NotFoundPage';
 
 // Pages
-import SignUpPage from '../pages/SignUpPage';
-import SignInPage from '../pages/SignInPage';
+import HomePage from '../pages/HomePage';
+import AboutPage from '../pages/AboutPage';
+import ContactPage from '../pages/ContactPage';
+import ProjectsPage from '../pages/ProjectsPage';
+import DashboardPage from '../pages/DashboardPage';
+import TechExpertisePage from '../pages/TechExpertisePage';
 
 const PublicRoutes = () => {
   return (
-    <Routes>
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<Navigate to="/sign-in" replace />} />
-        <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Navigate to="/home" replace />} />
 
-        <Route path="*" element={<Navigate to="/sign-in" replace />} />
-      </Route>
-    </Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/tech-expertise" element={<TechExpertisePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Suspense>
   );
 };
 

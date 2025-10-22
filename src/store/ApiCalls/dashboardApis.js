@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { fetchBaseQuery } from '@reduxjs/toolkit/query';
-import { dashboardApiEndPoints } from '../../config/apiEndPoints';
+import { dashboardApiEndPoints } from '../../consts/apiEndPoints';
 
 export const dashboardApis = createApi({
   reducerPath: 'dashboardApis',
