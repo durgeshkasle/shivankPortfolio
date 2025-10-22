@@ -16,7 +16,7 @@ function App() {
 
   useEffect((isUserAuthenticated) => {
     if(isUserAuthenticated) navigate('/dashboard');
-    if(!isUserAuthenticated) navigate('https://shivank-singh-portfolio.netlify.app/home');
+    if(!isUserAuthenticated) navigate('/home');
   }, [isUserAuthenticated]);
 
   return (
