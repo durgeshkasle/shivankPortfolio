@@ -71,7 +71,7 @@ const MenuButton = styled(Button, {
 const Header = () => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const location = useLocation(); // <-- Detect current route
+  const location = useLocation();
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const menuItems = [
