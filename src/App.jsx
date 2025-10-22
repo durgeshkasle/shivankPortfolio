@@ -14,8 +14,9 @@ function App() {
   const navigate = useNavigate();
   const isUserAuthenticated = false;
 
-  useEffect(() => {
-    navigate('/');
+  useEffect((isUserAuthenticated) => {
+    if(isUserAuthenticated) navigate('/dashboard');
+    if(!isUserAuthenticated) navigate('/home');
   }, [isUserAuthenticated]);
 
   return (
