@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // @Mui Icons :-
 import StarIcon from '@mui/icons-material/Star';
 import BoltIcon from '@mui/icons-material/Bolt';
 import CodeIcon from '@mui/icons-material/Code';
-import LayersIcon from '@mui/icons-material/Layers';
 import { useTheme } from '@mui/material/styles';
+import LayersIcon from '@mui/icons-material/Layers';
 
 import Hero from '../components/homeComponents/Hero';
 import AISection from '../components/homeComponents/AISection';
@@ -17,7 +18,15 @@ import ContributionStats from '../components/homeComponents/ContributionStats';
 
 const HomeContainer = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
+  const handleSeeMyWork = useCallback(() => {
+    navigate('/about'); // Targeting the About page
+  }, [navigate]);
+
+  //--------------------------
   // Feature data
+  //--------------------------
   const featureCards = [
     {
       icon: <StarIcon sx={{ fontSize: 40, color: theme.palette.primary.main, mb: 1 }} />,
@@ -62,7 +71,7 @@ const HomeContainer = () => {
 
   return (
     <>
-      <Hero />
+      <Hero handleSeeMyWork={handleSeeMyWork} />
       <AISection featureCards={featureCards} stackCards={stackCards} />
       {/* <QuickStats/> */}
       {/* <DeveloperTerminal/> */}

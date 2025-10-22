@@ -34,7 +34,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 // ========= Component =========
 export default function ProjectCards(props) {
-  const { projects = [] } = props;
+  const { projects = [], handleViewMyProBtn = () => {} } = props;
   const theme = useTheme();
 
   return (
@@ -75,7 +75,21 @@ export default function ProjectCards(props) {
         {projects.map((project) => (
           <Grid item xs={12} sm={6} md={4} key={project.title}>
             <StyledCard>
-              <CardMedia component="img" height="200" image={project.image} alt={project.title} />
+              {/* <CardMedia component="img" height="200" image={project.image} alt={project.title} loading='lazy' /> */}
+
+              <CardMedia
+                component="img"
+                image={project.image}
+                alt={project.title}
+                loading="lazy"
+                sx={{
+                  height: 200,
+                  width: '100%',
+                  objectFit: 'fill',
+                  objectPosition: 'center',
+                }}
+              />
+
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
                   {project.title}
@@ -100,7 +114,7 @@ export default function ProjectCards(props) {
                   ))}
                 </Box>
 
-                <Button variant="contained" size="small" href={project.link}>
+                <Button variant="contained" size="small" onClick={handleViewMyProBtn}>
                   View Project
                 </Button>
               </CardContent>

@@ -288,7 +288,7 @@ export default function HeroSection() {
                   },
                 }}
               >
-                Hire Me
+                Hire Me 🙋‍♂️
               </Button>
             </Box>
           </Box>

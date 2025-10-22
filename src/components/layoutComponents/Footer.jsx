@@ -10,8 +10,7 @@ import Typography from '@mui/material/Typography';
 // MUI Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
 
 const AnimatedAppFooter = styled(Box)(({ theme }) => ({
@@ -45,9 +44,12 @@ const Footer = () => {
   const socialLinks = [
     { icon: <GitHubIcon />, color: '#333', url: 'https://github.com/shivankMERNPro' },
     { icon: <LinkedInIcon />, color: '#0077b5', url: 'https://www.linkedin.com/in/shivank011/' },
-    // { icon: <TwitterIcon />, color: '#1da1f2', url: 'https://twitter.com/ShivankSingh' },
-    // { icon: <InstagramIcon />, color: '#e1306c', url: 'https://instagram.com/ShivankSingh' },
     { icon: <EmailIcon />, color: '#ea4335', url: 'mailto:shivank.singh.developer@gmail.com' },
+    {
+      icon: <WhatsAppIcon />,
+      color: '#25D366',
+      url: 'https://wa.me/918169050968', // WhatsApp chat link (international format)
+    },
   ];
 
   const handleRedirect = (url) => {
@@ -64,10 +66,10 @@ const Footer = () => {
           letterSpacing: 0.5,
         }}
       >
-        © 2025 Shivank.dev — All Rights Reserved
+        © 2025 Shivank Singh. Building better software, one line at a time. All rights reserved.
       </Typography>
 
-      <Stack direction="row" justifyContent="center" spacing={2} mb={1}>
+      <Stack direction="row" justifyContent="center" spacing={2}>
         {socialLinks.map((item, index) => (
           <SocialButton key={index} color={item.color} onClick={() => handleRedirect(item.url)}>
             {item.icon}
