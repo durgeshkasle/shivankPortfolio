@@ -264,7 +264,6 @@ export default function HeroSection() {
                 variant="contained"
                 onClick={() => navigate('/projects')}
                 sx={{
-                  background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
                   textTransform: 'none',
                   fontWeight: 700,
                   borderRadius: 2,

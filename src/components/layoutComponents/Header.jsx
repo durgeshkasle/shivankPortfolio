@@ -34,22 +34,35 @@ const AnimatedAppBar = styled(AppBar)(({ theme }) => ({
   },
 }));
 
-const MenuButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.text.primary,
+const MenuButton = styled(Button, {
+  shouldForwardProp: (prop) => prop !== 'isActive',
+})(({ theme, isActive }) => ({
   position: 'relative',
-  fontWeight: 500,
   textTransform: 'none',
+  fontWeight: isActive ? 700 : 500,
+  color: isActive ? theme.palette.primary.main : theme.palette.text.primary,
+  transform: isActive ? 'scale(1.05)' : 'scale(1)',
+  transition: 'all 0.3s ease',
+
+  // Gradient underline animation
   '&::after': {
     content: '""',
     position: 'absolute',
     left: 0,
-    bottom: -2,
-    width: 0,
+    bottom: -4,
+    width: isActive ? '100%' : 0,
     height: 2,
     background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-    transition: 'width 0.3s ease',
     borderRadius: 2,
+    transition: 'width 0.3s ease',
   },
+
+  // === Hover styles ===
+  '&:hover': {
+    color: '#fff',
+    transform: 'scale(1.05)',
+  },
+
   '&:hover::after': {
     width: '100%',
   },
@@ -115,20 +128,7 @@ const Header = () => {
             {menuItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
-                <MenuButton
-                  key={item.label}
-                  component={Link}
-                  to={item.path}
-                  sx={{
-                    '&::after': {
-                      width: isActive ? '100%' : 0,
-                    },
-                    color: isActive ? theme.palette.primary.main : theme.palette.text.primary,
-                    fontWeight: isActive ? 700 : 500,
-                    transform: isActive ? 'scale(1.05)' : 'scale(1)',
-                    transition: 'all 0.3s ease',
-                  }}
-                >
+                <MenuButton key={item.label} component={Link} to={item.path} isActive={isActive}>
                   {item.label}
                 </MenuButton>
               );

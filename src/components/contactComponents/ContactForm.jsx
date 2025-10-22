@@ -18,22 +18,6 @@ const StyledTextField = styled(TextField)(({ theme }) => ({
   },
 }));
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(2),
-  padding: '12px 0',
-  fontWeight: 600,
-  borderRadius: '12px',
-  textTransform: 'none',
-  // width:"200px",
-  fontSize: '1rem',
-  transition: 'all 0.3s ease',
-  backgroundColor: theme.palette.primary.main,
-  '&:hover': {
-    backgroundColor: theme.palette.primary.dark,
-    transform: 'translateY(-2px)',
-  },
-}));
-
 // Styled Components
 const ChipBox = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -93,14 +77,7 @@ export default function ContactForm({
           variant="contained"
           color="primary"
           onClick={() => setShowForm((prev) => !prev)}
-          sx={{
-            borderRadius: '10px',
-            fontWeight: 600,
-            textTransform: 'none',
-            px: 4,
-            py: 1.5,
-            mb: '20px',
-          }}
+          sx={{ mb: '20px' }}
         >
           {showForm ? 'Hide Contact Form' : 'Show Contact Form'}
         </Button>
@@ -217,9 +194,9 @@ export default function ContactForm({
               )}
             />
 
-            <StyledButton type="submit" variant="contained" disabled={isLoading} fullWidth>
+            <Button type="submit" variant="contained" disabled={isLoading} fullWidth>
               {isLoading ? <CircularProgress size={24} sx={{ color: 'white' }} /> : 'Send Message'}
-            </StyledButton>
+            </Button>
 
             <ChipBox>
               {chips.map((chip, index) => (

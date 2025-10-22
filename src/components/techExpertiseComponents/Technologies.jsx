@@ -146,9 +146,14 @@ export default function Technologies(props) {
               textTransform: 'none',
               display: 'flex',
               justifyContent: 'center',
+              height: '30px',
+              borderRadius: '20px',
+              backgroundColor: 'none',
             },
             '& .Mui-selected': {
-              color: theme.palette.primary.main,
+              color: 'wheat',
+              background: 'linear-gradient(90deg, #00c6ff, #2979ff)',
+              transition: 'width 0.3s ease',
             },
           }}
         >
@@ -183,7 +188,7 @@ export default function Technologies(props) {
                       variant="h5"
                       sx={{
                         fontWeight: 600,
-                        color: theme.palette.primary.light,
+                        // color: theme.palette.primary.light,
                       }}
                     >
                       {technologiesSectionsData[activeTab].title}

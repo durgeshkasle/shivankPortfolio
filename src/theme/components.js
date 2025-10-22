@@ -2,11 +2,12 @@ const components = {
   MuiButton: {
     styleOverrides: {
       root: {
-        borderRadius: '30px',
+        borderRadius: '10px',
         textTransform: 'none',
         padding: '10px 24px',
-        fontWeight: 600,
+        fontWeight: 500,
         transition: 'all 0.3s ease',
+        color: 'white',
       },
       containedPrimary: {
         background: 'linear-gradient(90deg, #2979ff, #00c6ff)',
@@ -15,12 +16,12 @@ const components = {
           background: 'linear-gradient(90deg, #00c6ff, #2979ff)',
         },
       },
-      outlined: {
+
+      outlinedPrimary: {
         borderColor: '#2979ff',
-        color: '#2979ff',
         '&:hover': {
           borderColor: '#00c6ff',
-          color: '#00c6ff',
+          backgroundColor: '#121c34',
         },
       },
     },

@@ -33,6 +33,17 @@ const HeroSubText = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(4),
 }));
 
+const TechStalwarts = styled(Box)(({ theme }) => ({
+  color: 'secondary.main',
+  fontWeight: 600,
+  textDecoration: 'none',
+  transition: 'color 0.3s ease',
+  '&:hover': {
+    color: 'primary.main',
+    textDecoration: 'underline',
+  },
+}));
+
 const ProfileImage = styled(Avatar)(({ theme }) => ({
   width: '80%',
   height: '60%',
@@ -50,7 +61,11 @@ const ProfileImage = styled(Avatar)(({ theme }) => ({
 export default function Hero() {
   return (
     <HeroContainer id="about">
-      <Grid container spacing={10} alignItems="center">
+      <Grid
+        container
+        spacing={10}
+        sx={{ width: '100%', alignItems: 'center', justifyContent: 'space-between' }}
+      >
         {/* LEFT SIDE CONTENT */}
         <Grid item xs={12} md={6}>
           <Typography variant="h6" color="primary.main" sx={{ mb: 1 }}>
@@ -58,7 +73,7 @@ export default function Hero() {
           </Typography>
 
           <HeroHeading variant="h1">
-            Hello, my <br /> name’s{' '}
+            Hello, my <br /> self{' '}
             <Box component="span" sx={{ color: 'primary.main' }}>
               Shivank Singh.
             </Box>
@@ -66,13 +81,18 @@ export default function Hero() {
 
           <HeroSubText variant="body1">
             I’m a full stack developer. Currently working with <br />
-            <Box component="span" sx={{ color: 'secondary.main' }}>
+            <TechStalwarts
+              component="a"
+              href="https://techstalwarts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Techstalwarts
-            </Box>{' '}
+            </TechStalwarts>{' '}
             as a Software Developer.
           </HeroSubText>
 
-          <Box sx={{ display: 'flex', gap: 5, flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
             <Button variant="contained" color="primary">
               Download CV
             </Button>

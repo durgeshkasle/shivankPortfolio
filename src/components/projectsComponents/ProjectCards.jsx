@@ -100,20 +100,7 @@ export default function ProjectCards(props) {
                   ))}
                 </Box>
 
-                <Button
-                  variant="contained"
-                  size="small"
-                  href={project.link}
-                  sx={{
-                    background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-                    color: '#fff',
-                    borderRadius: '8px',
-                    textTransform: 'none',
-                    '&:hover': {
-                      opacity: 0.9,
-                    },
-                  }}
-                >
+                <Button variant="contained" size="small" href={project.link}>
                   View Project
                 </Button>
               </CardContent>

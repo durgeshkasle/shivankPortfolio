@@ -175,7 +175,6 @@ const TechExpertiseContainer = () => {
           desc: 'MongoDB ODM',
           icon: <SdStorageIcon sx={{ color: '#4db33d' }} />,
         },
-        { name: 'Postman', desc: 'API testing', icon: <BuildIcon sx={{ color: '#ff6d00' }} /> },
         {
           name: 'Supertest',
           desc: 'API testing',
@@ -200,7 +199,7 @@ const TechExpertiseContainer = () => {
         { name: 'Postman', desc: 'API testing', icon: <BuildIcon sx={{ color: '#ff6d00' }} /> },
         { name: 'VS Code', desc: 'Code Editor', icon: <WorkIcon sx={{ color: '#2979ff' }} /> },
         {
-          name: 'Courser AI',
+          name: 'Cursor AI',
           desc: 'AI learning assistant',
           icon: <PsychologyIcon sx={{ color: '#ff4081' }} />,
         },
