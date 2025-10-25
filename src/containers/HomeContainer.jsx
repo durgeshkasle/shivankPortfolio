@@ -8,12 +8,13 @@ import CodeIcon from '@mui/icons-material/Code';
 import { useTheme } from '@mui/material/styles';
 import LayersIcon from '@mui/icons-material/Layers';
 
+// Components :-
 import Hero from '../components/homeComponents/Hero';
 import AISection from '../components/homeComponents/AISection';
 
 import QuickStats from '../components/homeComponents/QuickStats';
-import DeveloperTerminal from '../components/homeComponents/DeveloperTerminal';
 import GithubActivity from '../components/homeComponents/GithubActivity';
+import DeveloperTerminal from '../components/homeComponents/DeveloperTerminal';
 import ContributionStats from '../components/homeComponents/ContributionStats';
 
 const HomeContainer = () => {

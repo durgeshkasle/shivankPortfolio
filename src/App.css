@@ -1,8 +1,11 @@
+/* Reset default margins */
 * {
-  margin: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* App.css */
+/* App main container */
 .app {
   min-height: 100vh;
   display: flex;
@@ -13,21 +16,22 @@
   padding: 2rem;
 }
 
+/* Header */
 .app-header {
-  width: '100%';
-  max-width: '1300px';
-  position: 'sticky';
-  padding: '1rem 0';
-  background-color: 'red';
-  color: '#fff';
-  text-align: 'center';
-  box-shadow: '0 2px 4px rgba(0,0,0,0.1)';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  background-color: transparent;
 }
 
+/* Footer */
 .app-footer {
-  width: '100%';
-  padding: '1rem 0';
-  background-color: 'red';
-  text-align: 'center';
-  box-shadow: '0 -2px 4px rgba(0,0,0,0.05)';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  background-color: transparent;
 }

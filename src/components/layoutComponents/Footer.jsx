@@ -45,11 +45,11 @@ const Footer = () => {
     { icon: <GitHubIcon />, color: '#333', url: 'https://github.com/shivankMERNPro' },
     { icon: <LinkedInIcon />, color: '#0077b5', url: 'https://www.linkedin.com/in/shivank011/' },
     { icon: <EmailIcon />, color: '#ea4335', url: 'mailto:shivank.singh.developer@gmail.com' },
-    {
-      icon: <WhatsAppIcon />,
-      color: '#25D366',
-      url: 'https://wa.me/918169050968', // WhatsApp chat link (international format)
-    },
+    // {
+    //   icon: <WhatsAppIcon />,
+    //   color: '#25D366',
+    //   url: 'https://wa.me/918169050968',
+    // },
   ];
 
   const handleRedirect = (url) => {
