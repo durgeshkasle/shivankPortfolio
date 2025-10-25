@@ -38,6 +38,8 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 1316px;
+  padding-top: 65px;
+  /* margin-bottom: 100px; */
 }
 
 @media (min-width: var(--breakpoint-tablet)) {

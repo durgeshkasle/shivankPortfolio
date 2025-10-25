@@ -1,23 +1,23 @@
 import React from 'react';
 
 // @mui cons
-import SchoolIcon from '@mui/icons-material/School';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import StarIcon from '@mui/icons-material/Star';
+import GroupIcon from '@mui/icons-material/Group';
+import SchoolIcon from '@mui/icons-material/School';
 import StorageIcon from '@mui/icons-material/Storage';
-import BugReportIcon from '@mui/icons-material/BugReport';
 import TimelineIcon from '@mui/icons-material/Timeline';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import BugReportIcon from '@mui/icons-material/BugReport';
 import GroupWorkIcon from '@mui/icons-material/GroupWork';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import GroupIcon from '@mui/icons-material/Group';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import TerminalIcon from '@mui/icons-material/Terminal';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 // About Module Pages ;-
 import HeroSection from '../components/aboutComponents/HeroSection';

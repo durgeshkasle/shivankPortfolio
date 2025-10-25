@@ -25,28 +25,28 @@ const ProjectsContainer = () => {
   const projects = [
     {
       title: 'MagicBus',
-      desc: 'A personal portfolio built using React.js and Material UI with theme-based design.',
+      desc: 'A web-based analytics platform designed to track and evaluate the performance and ranking of over 120+ centres across India, covering more than 300,000 students. The system monitors centre-level activities, growth metrics, and engagement outcomes to help optimize program effectiveness.',
       tech: ['React.js', 'Node.Js', 'Express.Js', 'MongoDB', 'TypeScript', 'MUI'],
       image: magicBusLogo,
       link: '#',
     },
     {
       title: 'Jarvis Invest',
-      desc: 'A Kanban-style task tracker built using MERN stack and Redux Toolkit.',
+      desc: 'A web-based platform developed for seamless stock trading and portfolio management, enabling users to track investments, monitor market trends, and analyze portfolio performance in real time.',
       tech: ['React.Js', 'Node.Js', 'Express.Js', 'MySQL', 'Redux', 'JWT Auth'],
       image: jarvisLogo,
       link: '#',
     },
     {
       title: 'Tomor',
-      desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
+      desc: 'TOMOR is a retail and order management platform designed for local, branch-based businesses. It has 4 core user roles with different portals or apps.',
       tech: ['Next.Js', 'Shadcn', 'Chart.js', 'JavaScript', 'Payment gateway'],
       image: tomorLogo,
       link: '#',
     },
     {
       title: 'MultiAct',
-      desc: 'Admin dashboard for e-commerce analytics with charts and filtering features.',
+      desc: 'A web-based internal tool developed for data analysts to evaluate and visualize portfolio performance using advanced data analytics and interactive insights.',
       tech: ['React.Js', 'CSS', 'HTML', 'HighChart.js', 'Google Authentication'],
       image: multiActLogo,
       link: '#',

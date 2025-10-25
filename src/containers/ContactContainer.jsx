@@ -1,23 +1,28 @@
 import React, { useRef, useState } from 'react';
-import { Box, Container } from '@mui/material';
-
-import EmailIcon from '@mui/icons-material/Email';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FlashOnIcon from '@mui/icons-material/FlashOn';
-import LockIcon from '@mui/icons-material/Lock';
-import WorkIcon from '@mui/icons-material/Work';
 
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+// MUI Icons :-
+import LockIcon from '@mui/icons-material/Lock';
+import WorkIcon from '@mui/icons-material/Work';
+import EmailIcon from '@mui/icons-material/Email';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+// MUI Components :-
+import Box from '@mui/material/Box';
+
+// Utils :-
 import { sendEmailService } from '../utils/emailService';
 import { contactFormSchema } from '../validations/contactFormValidation';
 
+// Components :-
+import ContactCard from '../components/contactComponents/ContactCard';
 import ContactForm from '../components/contactComponents/ContactForm';
 import HeadingAndStance from '../components/contactComponents/HeadingAndStance';
-import ContactCard from '../components/contactComponents/ContactCard';
 
 const ContactContainer = () => {
   const formRef = useRef();
@@ -119,7 +124,7 @@ const ContactContainer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        <Box sx={{ mt: 5 }}>
+        <Box sx={{ mt: 5, mb: 7 }}>
           <ContactForm {...formProps} />
         </Box>
       </motion.div>

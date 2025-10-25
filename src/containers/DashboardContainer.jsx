@@ -1,6 +1,10 @@
 import React from 'react';
-import { useGetProductsListQuery } from '../store/ApiCalls/dashboardApis';
+
+// Common Components :-
 import Loader from '../components/commonComponents/Loader';
+
+// Services :-
+import { useGetProductsListQuery } from '../store/ApiCalls/dashboardApis';
 
 const DashboardContainer = () => {
   const { data: products, error, isLoading } = useGetProductsListQuery();
