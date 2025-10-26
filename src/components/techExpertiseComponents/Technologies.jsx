@@ -21,13 +21,13 @@ export default function Technologies({ technologiesSectionsData = [] }) {
   const [isAuto, setIsAuto] = useState(true);
 
   // Auto switch logic
-  useEffect(() => {
-    if (!isMobile || !isAuto) return;
-    const interval = setInterval(() => {
-      setActiveTab((prev) => (prev === technologiesSectionsData.length - 1 ? 0 : prev + 1));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [isMobile, isAuto, technologiesSectionsData.length]);
+  // useEffect(() => {
+  //   if (!isMobile || !isAuto) return;
+  //   const interval = setInterval(() => {
+  //     setActiveTab((prev) => (prev === technologiesSectionsData.length - 1 ? 0 : prev + 1));
+  //   }, 2000);
+  //   return () => clearInterval(interval);
+  // }, [isMobile, isAuto, technologiesSectionsData.length]);
 
   const handleTabChange = (_, newValue) => {
     setActiveTab(newValue);
@@ -151,6 +151,11 @@ const Heading = styled(Typography)(({ theme }) => ({
   background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
+  fontSize:"40px",
+
+  [theme.breakpoints.down("sm")]:{
+    fontSize:"28px"
+  }
 }));
 
 const SubText = styled(Typography)(({ theme }) => ({
@@ -171,9 +176,9 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
     height: '30px',
     borderRadius: '20px',
     backgroundColor: 'none',
+    color: 'wheat',
   },
   '& .Mui-selected': {
-    color: 'wheat',
     background: 'linear-gradient(90deg, #00c6ff, #2979ff)',
     transition: 'width 0.3s ease',
   },

@@ -24,6 +24,22 @@ const ExperienceContainer = styled(Box)(({ theme }) => ({
   },
 }));
 
+const Heading = styled(Box)(({ theme }) => ({
+  fontWeight: 700,
+  color: 'primary.main',
+  mb: 4,
+  textAlign: 'center',
+  background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  fontSize: '50px',
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '29px',
+    mb: 2,
+  },
+}));
+
 const ExperienceCard = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5, 3),
   borderRadius: '20px',
@@ -40,21 +56,7 @@ export default function Experience(props) {
 
   return (
     <ExperienceContainer id="experience">
-      <Typography
-        variant="h2"
-        sx={{
-          fontWeight: 700,
-          color: 'primary.main',
-          mb: { md: 4, sm: 0 },
-          textAlign: 'center',
-          background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          fontSize: { xs: '26px', md: '50px' },
-        }}
-      >
-        Professional Experience
-      </Typography>
+      <Heading variant="h2">Professional Experience</Heading>
 
       <ExperienceCard>
         <Grid container spacing={4}>
@@ -63,9 +65,16 @@ export default function Experience(props) {
             <Typography variant="h5" sx={{ mb: 2 }}>
               Professional Summary
             </Typography>
+
             <Typography
               variant="body1"
-              sx={{ mb: 2, color: 'text.secondary', pl: '25px', pr: '10px' }}
+              sx={{
+                mb: 2,
+                color: 'text.secondary',
+                pl: '25px',
+                pr: '10px',
+                fontSize: { xs: '13px' },
+              }}
             >
               I’m a passionate <strong>MERN Stack Developer</strong> with{' '}
               <Box component="span" sx={{ color: 'primary.main' }}>
@@ -89,7 +98,12 @@ export default function Experience(props) {
               {highlights.map((item, i) => (
                 <ListItem key={i} sx={{ py: 1 }}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
+                  <ListItemText
+                    primary={item.text}
+                    primaryTypographyProps={{
+                      fontSize: { xs: '0.7rem', sm: '0.9rem' },
+                    }}
+                  />
                 </ListItem>
               ))}
             </List>

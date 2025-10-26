@@ -49,6 +49,11 @@ const HeroContent = styled(Box)(({ theme }) => ({
   position: 'absolute',
   top: '15%',
   left: '3%',
+
+  [theme.breakpoints.down('sm')]: {
+    top: '4%',
+    left: '3px',
+  },
 }));
 
 const HeroHeading = styled(Typography)(({ theme }) => ({
@@ -77,12 +82,17 @@ const TechStalwarts = styled(Box)(({ theme }) => ({
   },
 }));
 
-// ⭐ Stats Box
+const ResponsivenessText = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '22px',
+  },
+}));
+
 const StatsContainer = styled(Paper)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
-  flexWrap: 'wrap',
+  flexWrap: 'nowrap',
   backgroundColor: '#fff',
   color: '#000',
   borderRadius: '16px',
@@ -91,10 +101,17 @@ const StatsContainer = styled(Paper)(({ theme }) => ({
   width: '900px',
   margin: '0 auto',
   position: 'absolute',
-
   top: '70%',
   left: '20%',
   right: '50%',
+
+  // 👇 Responsive styles
+  [theme.breakpoints.down('md')]: {
+    width: '90%',
+    left: '5%',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
 }));
 
 const StatItem = styled(Box)(({ theme }) => ({
@@ -103,6 +120,22 @@ const StatItem = styled(Box)(({ theme }) => ({
   alignItems: 'center',
   textAlign: 'center',
   margin: theme.spacing(2, 3),
+
+  [theme.breakpoints.down('sm')]: {
+    flex: '1 1 45%',
+    margin: theme.spacing(1, 0),
+  },
+}));
+
+const ButtonSection = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  gap: '20px',
+  marginTop: '25px',
+
+  [theme.breakpoints.down('sm')]: {
+    marginTop: '40px',
+    gap: '5px',
+  },
 }));
 
 // ========== Component ==========
@@ -139,20 +172,20 @@ export default function Hero({ handleSeeMyWork = () => {} }) {
           Welcome to my portfolio!
         </Typography>
 
-        <HeroHeading variant="h1">
+        <ResponsivenessText variant="h1">
           Empowering your{' '}
           <Box component="span" sx={{ color: 'error.main' }}>
             Vision
           </Box>{' '}
           <br />
           with custom software solutions.
-        </HeroHeading>
+        </ResponsivenessText>
 
-        <HeroSubText variant="body1">
+        <ResponsivenessText variant="body1">
           Unlock the Power of Innovative Software Development
-        </HeroSubText>
+        </ResponsivenessText>
 
-        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+        <ButtonSection>
           <Button variant="contained" color="primary">
             <a href={resume} download style={{ color: 'white', textDecoration: 'none' }}>
               Download CV
@@ -161,7 +194,7 @@ export default function Hero({ handleSeeMyWork = () => {} }) {
           <Button variant="outlined" color="primary" onClick={handleSeeMyWork}>
             See my work →
           </Button>
-        </Box>
+        </ButtonSection>
       </HeroContent>
 
       {/* ⭐ Stats Section Below */}

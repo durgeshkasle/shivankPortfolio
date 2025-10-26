@@ -183,13 +183,14 @@ export default function HeroSection() {
             >
               Available for New Opertunite
             </BlinkingLabel>
+
             <Typography
               component="h1"
               sx={{
                 fontWeight: 800,
                 lineHeight: 1.1,
-                fontSize: { md: 50, xs: 45 },
-                mb: 4,
+                fontSize: { md: 50, xs: 28 },
+                mb: { md: 4, xs: 2 },
                 textAlign: { xs: 'left', md: 'left' },
                 background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
                 WebkitBackgroundClip: 'text',
@@ -200,11 +201,10 @@ export default function HeroSection() {
             </Typography>
 
             <Typography
-              variant="h6"
               sx={{
                 mb: 2,
                 color: theme.palette.text.secondary,
-                textAlign: { xs: 'center', md: 'left' },
+                textAlign: { xs: 'center', md: 'left', height: '50px' },
               }}
             >
               <span style={{ color: theme.palette.primary.main, fontWeight: 700 }}>{typed}</span>
@@ -215,13 +215,12 @@ export default function HeroSection() {
 
             <Typography
               sx={{
-                // fontSize: "23px",
-                // fontWeight: "500",
                 color: theme.palette.text.secondary,
                 mb: { md: 5, xs: 3 },
-                maxWidth: 640,
+                maxWidth: { md: 640, xs: '100%' },
                 textAlign: { xs: 'center', md: 'left' },
                 mx: { xs: 'auto', md: 0 },
+                fontWeight: { md: 500, xs: 100 },
               }}
             >
               I build{' '}

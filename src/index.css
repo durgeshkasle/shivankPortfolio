@@ -39,7 +39,13 @@ body {
   margin: 0 auto;
   max-width: 1316px;
   padding-top: 65px;
-  /* margin-bottom: 100px; */
+  margin-bottom: 0px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-bottom: 70px;
+  }
 }
 
 @media (min-width: var(--breakpoint-tablet)) {

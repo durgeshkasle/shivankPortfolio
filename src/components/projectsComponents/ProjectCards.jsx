@@ -32,6 +32,22 @@ const StyledCard = styled(Card)(({ theme }) => ({
   },
 }));
 
+const Heading = styled(Typography)(({ theme }) => ({
+  fontWeight: 700,
+  marginBottom: theme.spacing(4),
+  fontSize: '40px',
+  textAlign: 'center',
+  background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(2),
+    fontSize: '25px',
+    marginTop: theme.spacing(2),
+  },
+}));
+
 // ========= Component =========
 export default function ProjectCards(props) {
   const { projects = [], handleViewMyProBtn = () => {} } = props;
@@ -39,19 +55,7 @@ export default function ProjectCards(props) {
 
   return (
     <Box sx={{ py: { sm: 2, md: 5 }, px: { md: 0, sm: 2 } }}>
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: 700,
-          mb: 6,
-          textAlign: 'center',
-          background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-        }}
-      >
-        Featured Projects
-      </Typography>
+      <Heading variant="h3">Featured Projects</Heading>
       <Typography
         variant="subtitle1"
         sx={{
@@ -59,7 +63,7 @@ export default function ProjectCards(props) {
           textAlign: 'center',
           mb: 6,
           maxWidth: '900px',
-          mx: 'auto',
+          mx: { md: 'auto', xs: 1 },
         }}
       >
         Explore a selection of my key projects showcasing creativity, clean code, and

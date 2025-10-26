@@ -56,25 +56,28 @@ export const PublicLayout = () => {
 
       {/* ===== Fixed Whatsapp Icon for all modules ===== */}
       <SocialButton color={'#25D366'} onClick={() => handleRedirect('https://wa.me/918169050968')}>
-        <WhatsAppIcon sx={{fontSize:"50px"}} />
+        <WhatsAppIcon sx={{ fontSize: '50px' }} />
       </SocialButton>
     </>
   );
 };
 
-
 //---------------------------
-// Styled Components 
+// Styled Components
 //---------------------------
-const SocialButton = styled(IconButton)(({ color }) => ({
+const SocialButton = styled(IconButton)(({ theme, color }) => ({
   color,
   transition: 'transform 0.3s ease, color 0.3s ease',
   position: 'fixed',
-  right: '20px', 
+  right: '20px',
   bottom: '60px',
   zIndex: 1000,
   '&:hover': {
     transform: 'scale(1.2)',
     color: '#fff',
+  },
+
+  [theme.breakpoints.down('sm')]: {
+    right: '0px',
   },
 }));

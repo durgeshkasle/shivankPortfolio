@@ -85,7 +85,7 @@ export default function Stats(props) {
         sx={{
           justifyContent: { md: 'space-between', xs: 'center', md: 'center' },
           position: { xs: 'relative', md: 'static' }, // Needed for absolute cards on mobile
-          minHeight: { xs: 300, md: 'auto' }, // keeps height stable on mobile
+          minHeight: { xs: 200, md: 'auto' }, // keeps height stable on mobile
           width: '100%',
         }}
       >
