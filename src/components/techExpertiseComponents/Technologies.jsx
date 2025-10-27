@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // @mui Components
@@ -18,20 +18,9 @@ export default function Technologies({ technologiesSectionsData = [] }) {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [activeTab, setActiveTab] = useState(0);
-  const [isAuto, setIsAuto] = useState(true);
-
-  // Auto switch logic
-  // useEffect(() => {
-  //   if (!isMobile || !isAuto) return;
-  //   const interval = setInterval(() => {
-  //     setActiveTab((prev) => (prev === technologiesSectionsData.length - 1 ? 0 : prev + 1));
-  //   }, 2000);
-  //   return () => clearInterval(interval);
-  // }, [isMobile, isAuto, technologiesSectionsData.length]);
 
   const handleTabChange = (_, newValue) => {
     setActiveTab(newValue);
-    setIsAuto(false);
   };
 
   const variants = {
@@ -66,9 +55,9 @@ export default function Technologies({ technologiesSectionsData = [] }) {
       )}
 
       {/* ===== Cards Section ===== */}
-      <StyledGridContainer container spacing={2} columns={{ xs: 4, sm: 8, md: 12 }}>
+      <StyledGridContainer container spacing={4}>
         {isMobile ? (
-          <Grid xs={12} sm={4} md={3}>
+          <Grid item size={{ xs: 12, sm: 6, md: 4 }}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -103,24 +92,26 @@ export default function Technologies({ technologiesSectionsData = [] }) {
           </Grid>
         ) : (
           technologiesSectionsData.map((section) => (
-            <Grid key={section.title} item xs={12} sm={10} md={8}>
+            <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={section.title}>
               <SkillCard>
                 <SkillCardHeader>
                   {section.sectionIcon}
                   <SkillTitle variant="h5">{section.title}</SkillTitle>
                 </SkillCardHeader>
 
-                {section.items.map((item) => (
-                  <SkillItem key={item.name}>
-                    <SkillTextWrapper>
-                      <IconWrapper>{item.icon}</IconWrapper>
-                      <Box>
-                        <SkillName variant="subtitle1">{item.name}</SkillName>
-                        <SkillDesc variant="body2">{item.desc}</SkillDesc>
-                      </Box>
-                    </SkillTextWrapper>
-                  </SkillItem>
-                ))}
+                <Box sx={{ padding: '30px' }}>
+                  {section.items.map((item) => (
+                    <SkillItem key={item.name}>
+                      <SkillTextWrapper>
+                        <IconWrapper>{item.icon}</IconWrapper>
+                        <Box>
+                          <SkillName variant="subtitle1">{item.name}</SkillName>
+                          <SkillDesc variant="body2">{item.desc}</SkillDesc>
+                        </Box>
+                      </SkillTextWrapper>
+                    </SkillItem>
+                  ))}
+                </Box>
               </SkillCard>
             </Grid>
           ))
@@ -134,9 +125,9 @@ export default function Technologies({ technologiesSectionsData = [] }) {
 // Styled Components
 // -------------------------------
 const Container = styled(Box)(({ theme }) => ({
-  padding: '50px 24px',
+  // padding: '50px 24px',
   [theme.breakpoints.down('sm')]: {
-    padding: '10px 16px',
+    // padding: '20px 16px',
   },
 }));
 
@@ -151,11 +142,10 @@ const Heading = styled(Typography)(({ theme }) => ({
   background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
-  fontSize:"40px",
-
-  [theme.breakpoints.down("sm")]:{
-    fontSize:"28px"
-  }
+  fontSize: '40px',
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '28px',
+  },
 }));
 
 const SubText = styled(Typography)(({ theme }) => ({
@@ -168,31 +158,24 @@ const SubText = styled(Typography)(({ theme }) => ({
 const StyledTabs = styled(Tabs)(({ theme }) => ({
   marginBottom: theme.spacing(3),
   '& .MuiTab-root': {
-    color: theme.palette.text.secondary,
     fontWeight: 600,
     textTransform: 'none',
-    display: 'flex',
     justifyContent: 'center',
-    height: '30px',
+    height: '36px',
     borderRadius: '20px',
-    backgroundColor: 'none',
-    color: 'wheat',
+    color: '#fff',
   },
   '& .Mui-selected': {
     background: 'linear-gradient(90deg, #00c6ff, #2979ff)',
-    transition: 'width 0.3s ease',
   },
 }));
 
 const SkillCard = styled(Box)(({ theme }) => ({
-  background: theme.palette.background.paper,
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
   borderRadius: '20px',
-  padding: '40px',
-  width: '400px',
-  height: '1300px',
+  width: '100%',
   margin: '0 auto',
   boxShadow: '0 6px 18px rgba(0,0,0,0.35)',
-  background: 'linear-gradient(145deg, #0f172a, #111827)',
   border: '1px solid rgba(255,255,255,0.08)',
   transition: 'all 0.35s ease',
   '&:hover': {
@@ -201,23 +184,26 @@ const SkillCard = styled(Box)(({ theme }) => ({
     border: `1px solid ${theme.palette.primary.light}`,
     background: 'linear-gradient(145deg, rgba(25,35,55,0.95), rgba(16,22,36,0.9))',
   },
-  [theme.breakpoints.down('sm')]: {
-    padding: '28px',
-    width: '340px',
-    height: '600px',
-    overflowY: 'auto',
-  },
+  height: '650px',
+  overflowY: 'auto',
 }));
 
-const SkillCardHeader = styled(Box)(() => ({
+const SkillCardHeader = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  marginBottom: '24px',
+  position: 'sticky',
+  top: -1,
+  background: 'linear-gradient(145deg, #0f172a, #111827)',
+  zIndex: 1,
+  paddingBottom: '15px',
+  paddingTop: '25px',
+  paddingLeft: '20px',
 }));
 
 const SkillTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
   color: theme.palette.primary.light,
+  marginLeft: '12px',
 }));
 
 const SkillItem = styled(Box)(({ theme }) => ({

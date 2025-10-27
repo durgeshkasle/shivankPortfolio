@@ -20,7 +20,7 @@ const TimelineContainer = styled(Box)(({ theme }) => ({
   border: `1px solid rgba(255,255,255,0.08)`,
 
   [theme.breakpoints.down('sm')]: {
-    margin: '40px 20px 40px 20px',
+    margin: '40px 0px',
     padding: '15px 40px',
   },
 }));

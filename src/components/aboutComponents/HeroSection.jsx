@@ -70,7 +70,7 @@ const BlinkingLabel = styled(Typography)(({ theme }) => {
 
 // ======= Styled Components =========
 const StatsCard = styled(Box)(({ theme }) => ({
-  width: '600px',
+  width: '100%',
   borderRadius: 24,
   background: 'linear-gradient(145deg, #0f172a, #111827)',
   border: '1px solid rgba(255,255,255,0.08)',
@@ -87,7 +87,6 @@ const StatsCard = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     padding: '20px',
-    width: '340px',
   },
 }));
 
@@ -158,17 +157,9 @@ export default function HeroSection() {
 
   return (
     <Box sx={{ py: { xs: 2, md: 15 } }}>
-      <Grid
-        container
-        spacing={5}
-        sx={{
-          alignItems: 'center',
-          justifyContent: { md: 'space-between', xs: 'center' },
-          padding: '0px 10px',
-        }}
-      >
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
         {/* ==== Left Section ==== */}
-        <Grid item xs={12} md={6}>
+        <Grid item size={{ xs: 12, sm: 12, md: 6 }}>
           <Box>
             <BlinkingLabel
               variant="subtitle2"
@@ -185,13 +176,11 @@ export default function HeroSection() {
             </BlinkingLabel>
 
             <Typography
-              component="h1"
               sx={{
-                fontWeight: 800,
+                fontWeight: 700,
                 lineHeight: 1.1,
-                fontSize: { md: 50, xs: 28 },
+                fontSize: { md: 40, xs: 28 },
                 mb: { md: 4, xs: 2 },
-                textAlign: { xs: 'left', md: 'left' },
                 background: `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -294,7 +283,7 @@ export default function HeroSection() {
         </Grid>
 
         {/* ==== Right Section ==== */}
-        <Grid item xs={12} md={6}>
+        <Grid item size={{ xs: 12, sm: 12, md: 6 }}>
           {statsData.map((stat, i) => (
             <StatsCard key={i}>
               <Box display="flex" alignItems="center" gap={2} mb={3}>

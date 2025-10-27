@@ -9,15 +9,10 @@ import { styled } from '@mui/material/styles';
 
 // ========= Style Components ===========
 const StatsContainer = styled(Box)(({ theme }) => ({
-  minHeight: '60vh',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-
-  [theme.breakpoints.down('md')]: {
-    padding: theme.spacing(6, 2),
-  },
 }));
 
 const StatCard = styled(Paper)(({ theme, index, total }) => ({
@@ -28,9 +23,9 @@ const StatCard = styled(Paper)(({ theme, index, total }) => ({
   color: theme.palette.text.primary,
   boxShadow: '0px 8px 20px rgba(0,0,0,0.3)',
   textAlign: 'center',
-  height: '210px',
+  maxHeight: '200px',
   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-  width: '290px',
+  maxWidth: '290px',
   '&:hover': {
     transform: 'translateY(-6px)',
     boxShadow: '0px 12px 28px rgba(0,0,0,0.45)',
@@ -90,7 +85,7 @@ export default function Stats(props) {
         }}
       >
         {stats.map((stat, i) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
+          <Grid item size={{ xs: 12, sm: 6, md: 4, lg:3 }} key={i}>
             <StatCard index={i} total={stats.length}>
               <Box sx={{ mb: 2 }}>{stat.icon}</Box>
               <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>

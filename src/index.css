@@ -39,7 +39,8 @@ body {
   margin: 0 auto;
   max-width: 1316px;
   padding-top: 65px;
-  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (max-width: 767px) {

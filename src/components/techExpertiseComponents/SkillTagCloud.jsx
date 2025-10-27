@@ -6,10 +6,10 @@ import { styled, useTheme } from '@mui/material/styles';
 
 // ===== Styled Component =====
 const Container = styled(Box)(({ theme }) => ({
-  padding: '50px 24px',
+  padding: '50px 0px',
   marginBottom: '40px',
   [theme.breakpoints.down('sm')]: {
-    padding: '20px 16px',
+    padding: '20px 0px',
   },
 }));
 
