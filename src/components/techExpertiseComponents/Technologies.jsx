@@ -15,19 +15,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 //----------------------------
 export default function Technologies({ technologiesSectionsData = [] }) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const [activeTab, setActiveTab] = useState(0);
-
-  const handleTabChange = (_, newValue) => {
-    setActiveTab(newValue);
-  };
-
-  const variants = {
-    enter: { opacity: 0, x: 50 },
-    center: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -50 },
-  };
 
   return (
     <Container>
@@ -39,83 +26,33 @@ export default function Technologies({ technologiesSectionsData = [] }) {
         </SubText>
       </SectionHeader>
 
-      {/* ===== Tabs (Visible only in Mobile) ===== */}
-      {isMobile && (
-        <StyledTabs
-          value={activeTab}
-          onChange={handleTabChange}
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-        >
-          {technologiesSectionsData.map((section, i) => (
-            <Tab key={i} label={section.title} />
-          ))}
-        </StyledTabs>
-      )}
 
       {/* ===== Cards Section ===== */}
-      <StyledGridContainer container spacing={4}>
-        {isMobile ? (
-          <Grid item size={{ xs: 12, sm: 6, md: 4 }}>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.5 }}
-              >
-                <SkillCard>
-                  <SkillCardHeader>
-                    {technologiesSectionsData[activeTab].sectionIcon}
-                    <SkillTitle variant="h5">
-                      {technologiesSectionsData[activeTab].title}
-                    </SkillTitle>
-                  </SkillCardHeader>
+      <StyledGridContainer container spacing={4} sx={{justifyContent:"flex-start"}}>
+        {technologiesSectionsData.map((section) => (
+          <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={section.title}>
+            <SkillCard>
+              <SkillCardHeader>
+                {section.sectionIcon}
+                <SkillTitle variant="h5">{section.title}</SkillTitle>
+              </SkillCardHeader>
 
-                  {technologiesSectionsData[activeTab].items.map((item) => (
-                    <SkillItem key={item.name}>
-                      <SkillTextWrapper>
-                        <IconWrapper>{item.icon}</IconWrapper>
-                        <Box>
-                          <SkillName variant="subtitle1">{item.name}</SkillName>
-                          <SkillDesc variant="body2">{item.desc}</SkillDesc>
-                        </Box>
-                      </SkillTextWrapper>
-                    </SkillItem>
-                  ))}
-                </SkillCard>
-              </motion.div>
-            </AnimatePresence>
+              <Box sx={{ padding: '30px' }}>
+                {section.items.map((item) => (
+                  <SkillItem key={item.name}>
+                    <SkillTextWrapper>
+                      <IconWrapper>{item.icon}</IconWrapper>
+                      <Box>
+                        <SkillName variant="subtitle1">{item.name}</SkillName>
+                        <SkillDesc variant="body2">{item.desc}</SkillDesc>
+                      </Box>
+                    </SkillTextWrapper>
+                  </SkillItem>
+                ))}
+              </Box>
+            </SkillCard>
           </Grid>
-        ) : (
-          technologiesSectionsData.map((section) => (
-            <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={section.title}>
-              <SkillCard>
-                <SkillCardHeader>
-                  {section.sectionIcon}
-                  <SkillTitle variant="h5">{section.title}</SkillTitle>
-                </SkillCardHeader>
-
-                <Box sx={{ padding: '30px' }}>
-                  {section.items.map((item) => (
-                    <SkillItem key={item.name}>
-                      <SkillTextWrapper>
-                        <IconWrapper>{item.icon}</IconWrapper>
-                        <Box>
-                          <SkillName variant="subtitle1">{item.name}</SkillName>
-                          <SkillDesc variant="body2">{item.desc}</SkillDesc>
-                        </Box>
-                      </SkillTextWrapper>
-                    </SkillItem>
-                  ))}
-                </Box>
-              </SkillCard>
-            </Grid>
-          ))
-        )}
+        ))}
       </StyledGridContainer>
     </Container>
   );
@@ -125,9 +62,7 @@ export default function Technologies({ technologiesSectionsData = [] }) {
 // Styled Components
 // -------------------------------
 const Container = styled(Box)(({ theme }) => ({
-  // padding: '50px 24px',
   [theme.breakpoints.down('sm')]: {
-    // padding: '20px 16px',
   },
 }));
 
@@ -184,8 +119,13 @@ const SkillCard = styled(Box)(({ theme }) => ({
     border: `1px solid ${theme.palette.primary.light}`,
     background: 'linear-gradient(145deg, rgba(25,35,55,0.95), rgba(16,22,36,0.9))',
   },
+    height: '1350px',
+
+  [theme.breakpoints.down("sm")]:{
   height: '650px',
   overflowY: 'auto',
+  }
+
 }));
 
 const SkillCardHeader = styled(Box)(({ theme }) => ({
@@ -198,6 +138,7 @@ const SkillCardHeader = styled(Box)(({ theme }) => ({
   paddingBottom: '15px',
   paddingTop: '25px',
   paddingLeft: '20px',
+  borderRadius:"20px 20px 0px 0px"
 }));
 
 const SkillTitle = styled(Typography)(({ theme }) => ({

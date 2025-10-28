@@ -102,19 +102,16 @@ export default function AISection(props) {
   );
 }
 
-
-
-
 //---------------------------
 // Styled components
 //---------------------------
 const Section = styled(Grid)(({ theme }) => ({
   height: 'calc(100vh - 100px)',
-  display: 'flex',              
-  alignItems: 'center',         
+  display: 'flex',
+  alignItems: 'center',
   justifyContent: 'space-between',
   [theme.breakpoints.down('sm')]: {
-    height: '100vh',             
+    height: '100vh',
   },
 }));
 
@@ -194,4 +191,3 @@ const BlinkingLabel = styled(Typography)(({ theme }) => {
     animation: `${blinkGlow} 2s infinite ease-in-out`,
   };
 });
-

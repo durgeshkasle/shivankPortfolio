@@ -17,7 +17,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   boxShadow: theme.shadows[5],
   transition: 'all 0.3s ease',
   cursor: 'pointer',
-  width:"100%",
+  width: '100%',
   '&:hover': {
     transform: 'translateY(-8px)',
     boxShadow: theme.shadows[8],
@@ -32,7 +32,7 @@ export default function ContactCard({ contacts }) {
   return (
     <Grid container spacing={3} justifyContent="center" sx={{ mb: 5 }}>
       {contacts.map((contact, index) => (
-        <Grid item  size={{ xs: 12,sm: 6, md:4 }} key={index}>
+        <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={index}>
           <StyledCard onClick={contact.onClick}>
             <CardContent>
               <IconButton

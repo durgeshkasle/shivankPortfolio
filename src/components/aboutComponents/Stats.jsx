@@ -85,7 +85,7 @@ export default function Stats(props) {
         }}
       >
         {stats.map((stat, i) => (
-          <Grid item size={{ xs: 12, sm: 6, md: 4, lg:3 }} key={i}>
+          <Grid item size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={i}>
             <StatCard index={i} total={stats.length}>
               <Box sx={{ mb: 2 }}>{stat.icon}</Box>
               <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main' }}>
