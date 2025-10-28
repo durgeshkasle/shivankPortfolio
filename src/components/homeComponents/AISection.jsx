@@ -62,7 +62,7 @@ export default function AISection(props) {
         </Box>
       </Grid>
 
-      <Grid item size={{ xs: 12, sm: 12, md: 6 }}>
+      <Grid item size={{ xs: 12, sm: 12, md: 6 }} >
         <DevelopmentStackCard>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <RocketLaunchIcon
@@ -106,14 +106,19 @@ export default function AISection(props) {
 // Styled components
 //---------------------------
 const Section = styled(Grid)(({ theme }) => ({
-  height: 'calc(100vh - 100px)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  [theme.breakpoints.down('sm')]: {
-    height: '100vh',
+
+  // Full height on desktop/laptop
+  height: '100vh',
+
+  [theme.breakpoints.down("md")]: {
+    // Auto height on mobile/tablet
+    height: 'auto',
   },
 }));
+
 
 const FeatureCard = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,

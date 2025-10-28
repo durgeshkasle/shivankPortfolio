@@ -43,9 +43,8 @@ body {
 ::-webkit-scrollbar-thumb {
   background: rgba(58, 134, 210, 0.4);
   border-radius: 10px;
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: background 0.3s ease,
+  box-shadow 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -62,6 +61,13 @@ body {
   padding-top: 65px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+/* Mobile  */
+@media (min-width: 300px) and (max-width: 768px) {
+  .container {
+    margin-bottom: 100px;
+  }
 }
 
 /* Tablet */
