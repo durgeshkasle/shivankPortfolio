@@ -10,7 +10,7 @@ export default function HeadingAndStance({ heading, stance }) {
         fontWeight={700}
         sx={{
           mb: 2,
-          fontSize: { md: '30px', xs: '25px' },
+          fontSize: { md: '40px', xs: '25px' },
           mt: 2,
           background: (theme) =>
             `linear-gradient(90deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,

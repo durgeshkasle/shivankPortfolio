@@ -78,6 +78,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   fontSize: '40px',
+  marginTop:"30px",
   [theme.breakpoints.down('sm')]: {
     fontSize: '28px',
   },
