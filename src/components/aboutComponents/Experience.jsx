@@ -76,7 +76,7 @@ export default function Experience(props) {
                 fontSize: { xs: '13px' },
               }}
             >
-              I’m a passionate <strong>MERN Stack Developer</strong> with{' '}
+              I’m a passionate <strong>FrontEnd Developer</strong> with{' '}
               <Box component="span" sx={{ color: 'primary.main' }}>
                 2 years 2 months
               </Box>{' '}
@@ -84,7 +84,7 @@ export default function Experience(props) {
               <Box component="span" sx={{ color: 'secondary.main' }}>
                 3 months internship
               </Box>
-              . Skilled in designing, developing, and deploying full-stack web applications with
+              . Skilled in designing and developing applications with
               clean and scalable code.
             </Typography>
           </Grid>

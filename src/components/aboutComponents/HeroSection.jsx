@@ -134,12 +134,12 @@ const ProgressBar = styled('div')(({ theme, value = 0, gradient }) => ({
 
 const statsData = [
   {
-    title: 'Full Stack Developer ',
+    title: 'FrontEnd Developer ',
     exp: '2+ Years Experience',
     projects: '4+',
     techs: '10+',
-    frontend: 88,
-    backend: 82,
+    frontend: 95,
+    backend: 20,
   },
 ];
 
@@ -148,8 +148,8 @@ export default function HeroSection() {
   const navigate = useNavigate();
 
   const roles = [
-    'MERN Stack Developer',
-    'React / Next.js Enthusiast',
+    'FrontEnd Developer',
+    'React Enthusiast',
     'UI-focused Engineer',
     'Open to Collaboration',
   ];
@@ -186,7 +186,7 @@ export default function HeroSection() {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              👋 Hi, I&rsquo;m Shivank Singh
+              👋 Hi, I&rsquo;m Durgesh Kasle
             </Typography>
 
             <Typography
@@ -216,10 +216,6 @@ export default function HeroSection() {
               <strong style={{ color: theme.palette.primary.main }}>
                 production-ready frontends{' '}
               </strong>
-              and{' '}
-              <strong style={{ color: theme.palette.success.main }}>
-                scalable Node.js backends
-              </strong>{' '}
               with a strong focus on
               <strong style={{ color: theme.palette.info.main }}> performance</strong>,
               <strong style={{ color: theme.palette.warning.main }}> accessibility</strong>, and
@@ -229,7 +225,7 @@ export default function HeroSection() {
               </strong>
               . From{' '}
               <strong style={{ color: theme.palette.primary.main }}>pixel-perfect UIs</strong> to
-              <strong style={{ color: theme.palette.success.main }}> efficient APIs</strong>, I aim
+              <strong style={{ color: theme.palette.success.main }}> efficient APIs Integration</strong>, I aim
               to deliver
               <strong style={{ color: theme.palette.info.main }}> clean</strong>,
               <strong style={{ color: theme.palette.success.main }}> reliable</strong>, and

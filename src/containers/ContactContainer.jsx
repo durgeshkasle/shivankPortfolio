@@ -33,15 +33,15 @@ const ContactContainer = () => {
   const contactData = [
     {
       title: 'Email Me',
-      subtitle: 'shivank.singh.developer@gmail.com',
+      subtitle: 'kasledurgesh@gmail.com',
       icon: <EmailIcon fontSize="large" />,
-      onClick: () => (window.location.href = 'mailto:prajapatidheeraJ005@gmail.com'),
+      onClick: () => (window.location.href = 'mailto:kasledurgesh@gmail.com'),
     },
     {
       title: 'LinkedIn',
       subtitle: 'Connect with me',
       icon: <LinkedInIcon fontSize="large" />,
-      onClick: () => window.open('https://www.linkedin.com/in/shivank011/', '_blank'),
+      onClick: () => window.open('https://www.linkedin.com/in/durgeshkasle/', '_blank'),
     },
   ];
 

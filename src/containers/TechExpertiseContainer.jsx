@@ -140,49 +140,6 @@ const TechExpertiseContainer = () => {
       ],
     },
     {
-      title: 'Backend',
-      sectionIcon: <StorageOutlinedIcon sx={{ color: '#ffb300', fontSize: '2rem', mr: 1 }} />,
-      items: [
-        {
-          name: 'Node.js',
-          desc: 'Runtime environment',
-          icon: <TerminalIcon sx={{ color: '#68a063' }} />,
-        },
-        {
-          name: 'Express.js',
-          desc: 'Web framework',
-          icon: <AssignmentIcon sx={{ color: '#ffffff' }} />,
-        },
-        {
-          name: 'MongoDB',
-          desc: 'NoSQL Database',
-          icon: <StorageRoundedIcon sx={{ color: '#4db33d' }} />,
-        },
-        { name: 'REST APIs', desc: 'API development', icon: <ApiIcon sx={{ color: '#00e5ff' }} /> },
-        {
-          name: 'JWT Auth',
-          desc: 'Secure authentication',
-          icon: <SecurityIcon sx={{ color: '#ff4081' }} />,
-        },
-        { name: 'Firebase', desc: 'Cloud backend', icon: <CloudIcon sx={{ color: '#ffca28' }} /> },
-        {
-          name: 'TypeScript',
-          desc: 'Typed JavaScript',
-          icon: <DataObjectIcon sx={{ color: '#3178c6' }} />,
-        },
-        {
-          name: 'Mongoose',
-          desc: 'MongoDB ODM',
-          icon: <SdStorageIcon sx={{ color: '#4db33d' }} />,
-        },
-        {
-          name: 'Supertest',
-          desc: 'API testing',
-          icon: <AssessmentIcon sx={{ color: '#2962ff' }} />,
-        },
-      ],
-    },
-    {
       title: 'Tools',
       sectionIcon: <SettingsApplicationsIcon sx={{ color: '#ab47bc', fontSize: '2rem', mr: 1 }} />,
       items: [

@@ -28,9 +28,9 @@ export default function Technologies({ technologiesSectionsData = [] }) {
 
 
       {/* ===== Cards Section ===== */}
-      <StyledGridContainer container spacing={4} sx={{justifyContent:"flex-start"}}>
+      <StyledGridContainer container spacing={4} sx={{ justifyContent: "flex-start" }}>
         {technologiesSectionsData.map((section) => (
-          <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={section.title}>
+          <Grid item size={{ xs: 12, sm: 6, md: 6 }} key={section.title}>
             <SkillCard>
               <SkillCardHeader>
                 {section.sectionIcon}
@@ -78,7 +78,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   fontSize: '40px',
-  marginTop:"30px",
+  marginTop: "30px",
   [theme.breakpoints.down('sm')]: {
     fontSize: '28px',
   },
@@ -120,11 +120,11 @@ const SkillCard = styled(Box)(({ theme }) => ({
     border: `1px solid ${theme.palette.primary.light}`,
     background: 'linear-gradient(145deg, rgba(25,35,55,0.95), rgba(16,22,36,0.9))',
   },
-    height: '1350px',
+  height: '1350px',
 
-  [theme.breakpoints.down("sm")]:{
-  height: '650px',
-  overflowY: 'auto',
+  [theme.breakpoints.down("sm")]: {
+    height: '650px',
+    overflowY: 'auto',
   }
 
 }));
@@ -139,7 +139,7 @@ const SkillCardHeader = styled(Box)(({ theme }) => ({
   paddingBottom: '15px',
   paddingTop: '25px',
   paddingLeft: '20px',
-  borderRadius:"20px 20px 0px 0px"
+  borderRadius: "20px 20px 0px 0px"
 }));
 
 const SkillTitle = styled(Typography)(({ theme }) => ({

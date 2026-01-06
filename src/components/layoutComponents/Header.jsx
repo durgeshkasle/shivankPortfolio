@@ -119,7 +119,7 @@ const Header = () => {
                 WebkitTextFillColor: 'transparent',
               }}
             >
-              Shivank.dev
+              Durgesh Kasle
             </Typography>
           </Box>
 

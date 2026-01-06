@@ -29,12 +29,8 @@ const AboutContainer = () => {
   // ======= Experience Page Data ========
   const highlights = [
     {
-      text: 'Proficient in building scalable full-stack applications using React.js, Node.js, Express, and MongoDB with clean and maintainable code.',
+      text: 'Proficient in building scalable applications using React.js with clean and maintainable code.',
       icon: <CodeIcon color="primary" />,
-    },
-    {
-      text: 'Hands-on experience in developing REST APIs, implementing JWT authentication, and delivering secure backend solutions.',
-      icon: <WorkIcon color="secondary" />,
     },
     {
       text: 'Strong problem-solving skills with expertise in clean architecture, modular coding practices, and performance optimization.',
@@ -49,20 +45,12 @@ const AboutContainer = () => {
       icon: <AssignmentIcon color="success" />,
     },
     {
-      text: 'Enhanced database performance through query optimization and indexing, reducing application response times by 25%.',
-      icon: <StorageIcon color="warning" />,
-    },
-    {
       text: 'Integrated AI-assisted tools such as Windsurf AI to improve code efficiency, reduce bugs, and accelerate development workflows.',
       icon: <BugReportIcon color="error" />,
     },
     {
       text: 'Delivered multiple production-ready modules and applications for enterprise-level projects, including V5 Global.',
       icon: <RocketLaunchIcon color="primary" />,
-    },
-    {
-      text: 'Designed and built interactive analytics dashboards and data visualization features using Highcharts and Recharts.',
-      icon: <DashboardIcon color="secondary" />,
     },
     {
       text: 'Led a 5-member team to design and deploy a college website, increasing student engagement by more than 40%.',
@@ -73,7 +61,7 @@ const AboutContainer = () => {
       icon: <EmojiEventsIcon sx={{ color: '#ffb400' }} />,
     },
     {
-      text: 'Worked on diverse projects including MagicBus, MultiAct, TOMOR, and Jarvis Analytics, handling both frontend and backend roles.',
+      text: 'Worked on diverse projects including FundsUp, Lubricants, Helpie, HubTown , Aditya Birla and many more.',
       icon: <WorkIcon color="success" />,
     },
     {
@@ -86,15 +74,15 @@ const AboutContainer = () => {
   const educationDetails = [
     {
       icon: <SchoolIcon color="primary" />,
-      title: 'Bachelor of Science (B.Sc.) in Information Technology',
-      institution: 'V.P.M R.Z Shah College, Mumbai, Maharashtra',
-      year: '2022 - 2025',
+      title: 'Bachelor of Engineering (B.E.)',
+      institution: 'A.P Shah Institute of Technology, Mumbai, Maharashtra',
+      year: '2019 - 2022',
     },
     {
       icon: <SchoolIcon color="primary" />,
-      title: 'Senior Secondary (Class XII), Central Board of Secondary Education (CBSE)',
-      institution: 'A.B.S International School & College',
-      year: '2020 - 2022',
+      title: 'Maharashtra State Board of Technical Education (MSBTE)',
+      institution: "Vidyavardhini's Bhausaheb Vartak Polytechnic",
+      year: '2017 - 2019',
     },
   ];
 
@@ -104,12 +92,6 @@ const AboutContainer = () => {
       name: 'React.js Developer',
       org: 'Tech Paathshala, Mumbai',
       year: '2023',
-    },
-    {
-      icon: <WorkspacePremiumIcon color="success" />,
-      name: 'Node.js Developer',
-      org: 'Tech Paathshala, Mumbai',
-      year: '2024',
     },
   ];
 

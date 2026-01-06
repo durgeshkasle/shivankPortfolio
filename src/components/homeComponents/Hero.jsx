@@ -26,7 +26,7 @@ import resume from '../../assets/pdfs/resume.pdf';
 //-------------------------
 // Component
 //-------------------------
-export default function Hero({ handleSeeMyWork = () => {} }) {
+export default function Hero({ handleSeeMyWork = () => { } }) {
   const videos = [bg1, bg2, bg3, bg4];
   const [currentVideo, setCurrentVideo] = useState(0);
   const videoRef = useRef(null);
@@ -91,7 +91,7 @@ export default function Hero({ handleSeeMyWork = () => {} }) {
           <Typography variant="h6" sx={{ fontWeight: 700 }}>
             5+
           </Typography>
-          <Typography variant="body2">Major Full-Stack Apps</Typography>
+          <Typography variant="body2">Major Web Apps</Typography>
         </StatItem>
 
         <StatItem>

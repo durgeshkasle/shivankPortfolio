@@ -69,7 +69,7 @@ export default function DeveloperTerminal() {
 
   const lines = [
     '$ whoami',
-    'Shivank Singh — MERN Stack Developer',
+    'Durgesh Kasle — FrontEnd Developer',
     '$ skills --top',
     'React.js, Next.js, Node.js, MongoDB, Redux Toolkit, TypeScript',
     '$ motto',

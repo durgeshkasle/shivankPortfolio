@@ -44,7 +44,7 @@ const FooterText = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     '&::after': {
       content:
-        '"© 2025 Shivank Singh. Building better software, one line at a time. All rights reserved."',
+        '"© 2025 Durgesh Kasle. Building better software, one line at a time. All rights reserved."',
     },
   },
   [theme.breakpoints.down('sm')]: {
@@ -66,9 +66,8 @@ const SocialButton = styled(IconButton)(({ color }) => ({
 // ===== Component =====
 const Footer = () => {
   const socialLinks = [
-    { icon: <GitHubIcon />, color: '#333', url: 'https://github.com/shivankMERNPro' },
-    { icon: <LinkedInIcon />, color: '#0077b5', url: 'https://www.linkedin.com/in/shivank011/' },
-    { icon: <EmailIcon />, color: '#ea4335', url: 'mailto:shivank.singh.developer@gmail.com' },
+    { icon: <LinkedInIcon />, color: '#0077b5', url: 'https://www.linkedin.com/in/durgeshkasle' },
+    { icon: <EmailIcon />, color: '#ea4335', url: 'mailto:kasledurgesh@gmail.com' },
   ];
 
   const handleRedirect = (url) => {
