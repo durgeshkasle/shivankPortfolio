@@ -4,15 +4,13 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import { useTheme, styled } from '@mui/material/styles';
 
 //---------------------
 // Component
 //---------------------
-export default function ProjectCards({ projects = [], handleViewMyProBtn = () => {} }) {
+export default function ProjectCards({ projects = [], handleViewMyProBtn = () => { } }) {
   const theme = useTheme();
 
   return (
@@ -29,13 +27,6 @@ export default function ProjectCards({ projects = [], handleViewMyProBtn = () =>
         {projects.map((project) => (
           <Grid item size={{ xs: 12, sm: 6, md: 6 }} key={project.title}>
             <StyledCard>
-              <CardMedia
-                component="img"
-                image={project.image}
-                alt={project.title}
-                loading="lazy"
-                sx={{ height: 200, width: '100%', objectFit: 'fill' }}
-              />
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
                   {project.title}
@@ -46,19 +37,6 @@ export default function ProjectCards({ projects = [], handleViewMyProBtn = () =>
                 >
                   {project.desc}
                 </Typography>
-
-                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
-                  {project.tech.map((tech) => (
-                    <Chip
-                      key={tech}
-                      label={tech}
-                      sx={{
-                        background: 'rgba(255,255,255,0.05)',
-                        color: theme.palette.text.primary,
-                      }}
-                    />
-                  ))}
-                </Box>
 
                 <Button variant="contained" size="small" onClick={handleViewMyProBtn}>
                   View Project

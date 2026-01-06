@@ -61,7 +61,7 @@ const AboutContainer = () => {
       icon: <EmojiEventsIcon sx={{ color: '#ffb400' }} />,
     },
     {
-      text: 'Worked on diverse projects including FundsUp, Lubricants, Helpie, HubTown , Aditya Birla and many more.',
+      text: 'Worked on diverse projects including FundzUp, Lubricants, Helpie, HubTown , Aditya Birla and many more.',
       icon: <WorkIcon color="success" />,
     },
     {

@@ -39,30 +39,28 @@ import SkillTagCloud from '../components/techExpertiseComponents/SkillTagCloud';
 
 const TechExpertiseContainer = () => {
   const skillsData = [
-    { skill: 'React.js', level: 90 },
-    { skill: 'Next.js', level: 85 },
-    { skill: 'Node.js', level: 80 },
-    { skill: 'MongoDB', level: 75 },
-    { skill: 'Material UI', level: 88 },
-    { skill: 'Redux Toolkit', level: 82 },
-    { skill: 'TypeScript', level: 70 },
-    { skill: 'Framer Motion', level: 65 },
-    { skill: 'Axios / Fetch', level: 85 },
+    { skill: 'React.js', level: 95 },
+    { skill: 'React Native', level: 80 },
+    { skill: 'JavaScript', level: 90 },
+    { skill: 'TypeScript', level: 80 },
+    { skill: 'Material UI', level: 90 },
+    { skill: 'Redux Toolkit', level: 90 },
+    { skill: 'Axios / Fetch', level: 90 },
+    { skill: 'CSS', level: 95 },
+    { skill: 'HTML', level: 95 },
   ];
 
   const skillTagCloudData = [
     'React.js',
-    'Next.js',
-    'Node.js',
-    'MongoDB',
+    'React Native',
+    'JavaScript',
+    'TypeScript',
     'Redux Toolkit',
     'Material UI',
     'Tailwind CSS',
-    'TypeScript',
-    'Framer Motion',
     'Axios / Fetch',
-    'Firebase',
-    'Chakra UI',
+    'CSS',
+    'HTML',
   ];
 
   const technologiesSectionsData = [
@@ -74,11 +72,6 @@ const TechExpertiseContainer = () => {
           name: 'React.js',
           desc: 'Building dynamic UIs',
           icon: <CodeIcon sx={{ color: '#61dafb' }} />,
-        },
-        {
-          name: 'Next.js',
-          desc: 'Server-side rendering',
-          icon: <RocketLaunchIcon sx={{ color: '#fff' }} />,
         },
         {
           name: 'JavaScript',
@@ -105,13 +98,6 @@ const TechExpertiseContainer = () => {
           desc: 'Data fetching & caching',
           icon: <SyncAltIcon sx={{ color: '#00bfa5' }} />,
         },
-
-        {
-          name: 'Framer Motion',
-          desc: 'Smooth animations',
-          icon: <StarIcon sx={{ color: '#e91e63' }} />,
-        },
-        { name: 'Jest', desc: 'Unit testing', icon: <BugReportIcon sx={{ color: '#f4511e' }} /> },
         {
           name: 'React Hook Form',
           desc: 'Form handling & validation',
@@ -127,16 +113,6 @@ const TechExpertiseContainer = () => {
           desc: 'API requests',
           icon: <HttpsIcon sx={{ color: '#03a9f4' }} />,
         },
-        // { name: "ESLint & Prettier", desc: "Code quality & formatting", icon: <SpellcheckIcon sx={{ color: "#ff5722" }} /> },
-
-        // { name: "Storybook", desc: "UI component explorer", icon: <ViewInArIcon sx={{ color: "#ff4081" }} /> },
-        // { name: "Vite", desc: "Fast frontend build tool", icon: <RocketLaunchIcon sx={{ color: "#673ab7" }} /> },
-        {
-          name: 'Chakra UI / Shadcn UI',
-          desc: 'Component libraries',
-          icon: <WidgetsIcon sx={{ color: '#00bcd4' }} />,
-        },
-        // { name: "Lottie / Rive", desc: "Animations & motion", icon: <AnimationIcon sx={{ color: "#e91e63" }} /> },
       ],
     },
     {
@@ -176,7 +152,7 @@ const TechExpertiseContainer = () => {
           desc: 'Agile management',
           icon: <GroupWorkIcon sx={{ color: '#0288d1' }} />,
         },
-        { name: 'Docker', desc: 'Containerization', icon: <CloudIcon sx={{ color: '#0db7ed' }} /> },
+        // { name: 'Docker', desc: 'Containerization', icon: <CloudIcon sx={{ color: '#0db7ed' }} /> },
       ],
     },
   ];

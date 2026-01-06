@@ -120,7 +120,7 @@ const SkillCard = styled(Box)(({ theme }) => ({
     border: `1px solid ${theme.palette.primary.light}`,
     background: 'linear-gradient(145deg, rgba(25,35,55,0.95), rgba(16,22,36,0.9))',
   },
-  height: '1350px',
+  height: '950px',
 
   [theme.breakpoints.down("sm")]: {
     height: '650px',
